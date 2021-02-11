@@ -1,4 +1,4 @@
-a:4:{s:4:"root";s:24:"./assets/less/style.less";s:8:"compiled";s:4889:".link {
+a:4:{s:4:"root";s:24:"./assets/less/style.less";s:8:"compiled";s:4890:".link {
   color: blue;
   font-size: 18px;
   text-decoration: none;
@@ -193,7 +193,7 @@ a:4:{s:4:"root";s:24:"./assets/less/style.less";s:8:"compiled";s:4889:".link {
   margin: 11px 0;
   font-size: 14px;
 }
-.content .article .article-nav p {
+.content .article .article-nav h3 {
   text-align: center;
 }
 .content .article .article-nav ol {
@@ -247,4 +247,4 @@ a {
   display: flex;
   padding: 0 15px;
 }
-";s:5:"files";a:2:{s:57:"/Applications/MAMP/htdocs/henrique/assets/less/style.less";i:1613055026;s:58:"/Applications/MAMP/htdocs/henrique/assets/less/blocks.less";i:1613058959;}s:7:"updated";i:1613058960;}
+";s:5:"files";a:2:{s:57:"/Applications/MAMP/htdocs/henrique/assets/less/style.less";i:1613055026;s:58:"/Applications/MAMP/htdocs/henrique/assets/less/blocks.less";i:1613061148;}s:7:"updated";i:1613061208;}
