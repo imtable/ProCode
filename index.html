@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>hgroup</title>
+   <link rel="icon" href="./compiler.php">
+   <link rel="stylesheet" href="assets/css/lustratio.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+   <div class="wrapper">
+      <div class="experiment-ann annotation">
+         <h3>Это экспериментальная технология</h3>
+         <p>
+            Так как спецификация этой технологии ещё не стабилизировалась, смотрите <a class="ann-link" href="#">таблицу совместимости</a> по поводу использования в различных браузерах. Также заметьте, что синтаксис и поведение экспериментальной технологии может измениться в будущих версиях браузеров, вслед за изменениями спецификации.
+         </p>
+      </div>
+      <div class="usage-ann annotation">
+         <p>
+            <span class="usage-h3">Примечание использования:</span> 
+            Этот элемент был удален из HTML5 (W3C) спецификации , но до сих пор остается в спецификации WHATWG. Он частично встроен в большинство браузеров, хотя бы поэтому врядли уйдет. Поскольку схематический алгоритм не реализован ни в одном брузере, семантика тега <code class="code-bg">&lthgroup&gt</code> на практике реализована только теоретически. Спецификация HTML5 (W3C) дает совет как обозначать <a class="ann-link" href="#">подзаголовки, альтернативные заголовки и слоганы</a>.
+         </p>
+      </div>
+
+      <p>
+         HTML <code>&lthgroup&gt</code> Элемент (HTML Headings Group Element - Элемент Группы Заголовков HTML) представляет заголовок раздела. Он определяет один заголовок, который участвует в cхеме документа как заголовок явно или неявно заданного раздела, к которому он принадлежит.
+      </p>
+      <p>
+         Собственно текст для схематического алгоритма - это текст первого элемента заголовка HTML наивысшего ранга (т. Е. Первый <a href="#"><code class="code-bg">&lth1&gt</code></a>, <a href="#"><code class="code-bg">&lth2&gt</code></a>, <a href="#">h3</a> , <a href="#">h4</a> , <a href="#">h5</a> или <a href="#">h6</a> с наименьшим числом потомков), а rank - уровень этого элемента заголовка HTML.
+      </p>
+      <p>
+         Поэтому этот элемент группирует несколько заголовков, внося лишь основной текст в план документа. Он позволяет связывать вторичные заголовки, такие как подзаголовки, альтернативные заголовки или даже теги, с основным заголовком, без загрязнения структуры документа.
+      </p>
+
+      <div class="info-table-wrapper">
+         <div class="info-table">
+            <div class="row">
+               <div class="cat">Категория информации</div>
+               <div class="info"><a href="#">Flow content</a>, heading content, palpable content.</div>
+            </div>
+            <div class="row">
+               <div class="cat">Permitted content	</div>
+               <div class="info">One or more <a href="#"><code>&lth1 &gt</code></a>, <a href="#"><code>&lth2&gt</code></a>, <a href="#"><code>&lth3&gt</code></a>, <a href="#"><code>&lth4&gt</code></a>, <a href="#"><code>&lth5&gt</code></a>, and/or <a href="#"><code>&lth6&gt</code></a>.</div>
+            </div>
+            <div class="row">
+               <div class="cat">Tag omission</div>
+               <div class="info">Нет, открывающий и закрывающий теги обязательны.</div>
+            </div>
+            <div class="row">
+               <div class="cat">Permitted parent elements</div>
+               <div class="info">Any element that accepts <a href="#">Flow content</a>.</div>
+            </div>
+            <div class="row">
+               <div class="cat">DOM interface</div>
+               <div class="info"><a href="#">HTMLElement</a></div>
+            </div>
+         </div>
+      </div>
+
+      <div class="attr">
+         <h2>Атрибуты</h2>
+         <p>This element only includes the <a href="#">global attributes</a>.</p>
+      </div>
+
+      <div class="exmpls">
+         <h2>Примеры</h2>
+         <div class="exmpls-ann annotation">
+            <div class="exmpls-code">
+               <p>&lt<span class="exmpls-tag">hgroup&gt</span></p>
+               <p class="nesting">&lt<span class="exmpls-tag">h1</span>&gtГлавный заголовок&lt/<span class="exmpls-tag">h1</span>&gt</p>
+               <p class="nesting">&lt<span class="exmpls-tag">h2</span>&gtВторичный заголовок&lt/<span class="exmpls-tag">h2</span>&gt</p>
+               <p>&lt/<span class="exmpls-tag">hgroup</span>&gt</p>
+            </div>
+         </div>
+      </div>
+      <div class="compatibility">
+         <h2>Совместимость браузеров</h2>
+         <div class="comp-ann annotation">
+            <a class="ann-link" href="#">We're converting our compatibility data into a machine-readable JSON format</a>. This compatibility table still uses the old format, because we haven't yet converted the data it contains. <a class="ann-link" href="#">Find out how you can help!</a>
+         </div>
+         <ul>
+            <li><a href="#">Настольные</a></li>
+            <li><a href="#">Мобильные</a></li>
+         </ul>
+         <table class="comp-table">
+            <tbody>
+               <tr>
+                  <th>Свойство</th>
+                  <th>Chrome</th>
+                  <th>Firefox (Gecko)</th>
+                  <th>Internet Explorer</th>
+                  <th>Opera</th>
+                  <th>Safari</th>
+               </tr>
+                  <tr>
+                  <td>Basic support</td>
+                  <td>5</td>
+                  <td><a href="#">4.0</a></a> (2.0)</td>
+                  <td>9.0</td>
+                  <td>11.10</td>
+                  <td>4.1</td>
+               </tr>
+            </tbody>
+         </table>
+         <table class="comp-table">
+            <tbody>
+               <tr>
+                  <th>Свойство</th>
+                  <th>Android</th>
+                  <th>Firefox Mobile (Gecko)</th>
+                  <th>IE Mobile</th>
+                  <th>Opera Mobile</th>
+                  <th>Safari Mobile</th>
+               </tr>
+               <tr>
+                  <td>Basic support</td>
+                  <td>2.2</td>
+                  <td>4.0 (2.0)</td>
+                  <td>9.0</td>
+                  <td>11.0</td>
+                  <td>5.0</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div class="extra">
+         <h2>Смотри также</h2>
+         <ul>
+            <li>
+               Другие элементы, связанные с разделом: <a class="code-bg" href="#">&ltbody&gt</a>, <a class="code-bg" href="#">&ltarticle&gt</a>, <a class="code-bg" href="#">&ltsection&gt</a>, <a class="code-bg" href="#">&ltaside&gt</a>, <a class="code-bg" href="#">&lth1&gt</a>, <a class="code-bg" href="#">&lth2&gt</a>, <a class="code-bg" href="#">&lth3&gt</a>, <a class="code-bg" href="#">&lth4&gt</a>, <a class="code-bg" href="#">&lth5&gt</a>, <a class="code-bg" href="#">&lth6&gt</a>, <a class="code-bg" href="#">&ltnav&gt</a>, <a class="code-bg" href="#">&ltheader&gt</a>, <a class="code-bg" href="#">&ltfooter&gt</a>, <a class="code-bg" href="#">&ltaddress&gt</a>;
+            </li>
+            <li>
+               <a href="#">Sections and outlines of an HTML5 document</a>.
+            </li>
+         </ul>
+      </div>
+   </div>
+</body>
+</html>

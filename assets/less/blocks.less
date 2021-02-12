@@ -1,0 +1,206 @@
+// main: style.less
+
+.title {
+	width: 333px;
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+	font-size: 35px;
+	line-height: 40px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.subtitle {
+	font-size: 18px;
+	color: gray;
+}
+
+.link {
+	color: blue;
+	font-size: 18px;
+	text-decoration: none;
+	padding: 5px;
+
+	&:hover,
+	&:focus {
+		color: darken(blue, 10%);
+	}
+}
+
+// ______________________________buttons______________________________
+.btn {
+	border: none;
+	font-family: "Roboto", sans-serif;
+	background-color: violet;
+	color: white;
+	border-radius: 60px;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+
+	&:hover,
+	&:focus {
+		background-color: darken(violet, 5%);
+	}
+}
+
+.btn-2 {
+	text-decoration: none;
+	background: #70c217;
+	padding: 22px 29px;
+	display: inline-block;
+
+	&:hover,
+	&:focus {
+		background-color: darken(#70c217, 5%);
+	}
+}
+
+// ______________________________code______________________________
+
+.wrapper {
+	width: 1111px;
+	margin: 0 auto;
+	padding: 20px;
+	p {
+		margin: 20px 0;
+		max-width: 700px;
+	}
+	a {
+		text-decoration: none;
+		color: #00458b;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.code-bg {
+		background-color: lightgray;
+	}
+	h3 {
+		font-weight: bold;
+	}
+	h2 {
+		font-size: 36px;
+		font-weight: bold;
+	}
+	.annotation {
+		background-color: rgb(247, 247, 145);
+		border-left: 8px solid orange;
+		padding: 10px 10px;
+		margin: 20px 0;
+		margin-bottom: 5px;
+		line-height: 30px;
+		p {
+			margin: 0;
+		}
+		.ann-link {
+			text-decoration: underline;
+			color: black;
+		}
+	}
+	.experiment-ann {
+	}
+	.usage-ann {
+		background-color: rgb(204, 229, 254);
+		border-left: 7px solid rgb(122, 160, 198);
+		.usage-h3 {
+			font-weight: bold;
+		}
+	}
+	.info-table-wrapper {
+		display: flex;
+		.info-table {
+			background-color: rgb(247, 247, 241);
+			border: 1px solid blue;
+			border-left: 7px solid rgb(34, 34, 165);
+			.row {
+				margin: 0;
+				padding: 20px 10px;
+				display: flex;
+				flex: 0 0;
+				width: 666px;
+				& + .row {
+					border-top: 1px solid blue;
+				}
+				.cat {
+					width: 177px;
+					font-weight: bold;
+				}
+				.info {
+					margin-left: 22px;
+					text-align: left;
+				}
+			}
+		}
+	}
+
+	.attr {
+		margin-top: 40px;
+	}
+
+	.exmpls {
+		margin-top: 40px;
+		p {
+			display: block;
+		}
+		.exmpls-ann {
+			margin-top: 20px;
+			background-color: rgb(221, 232, 239);
+			border-left: 8px solid rgb(34, 34, 165);
+			line-height: 15px;
+			.exmpls-code {
+				margin-left: 22px;
+				p {
+					margin: 5px 0;
+				}
+				.exmpls-tag {
+					color: brown;
+				}
+				.nesting {
+					margin-left: 22px;
+				}
+			}
+		}
+	}
+
+	.compatibility {
+		margin-top: 40px;
+		.comp-ann {
+		}
+		ul {
+			margin-top: 40px;
+			li {
+				list-style: disc;
+				margin-left: 44px;
+				& + li {
+					margin-top: 11px;
+				}
+			}
+		}
+
+		.comp-table {
+			margin: 40px 0 30px;
+			th,
+			td {
+				border: 1px solid gray;
+				padding: 10px;
+			}
+		}
+	}
+
+	.extra {
+		margin-top: 40px;
+		ul {
+			width: 611px;
+			margin-top: 40px;
+			line-height: 28px;
+			li {
+				list-style: disc;
+				margin-left: 44px;
+				& + li {
+					margin-top: 11px;
+				}
+			}
+		}
+	}
+}
