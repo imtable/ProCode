@@ -98,7 +98,7 @@
 }
 .wrapper .info-table-wrapper .info-table {
   background-color: #f7f7f1;
-  border: 1px solid blue;
+  border: 2px solid #2222a5;
   border-left: 7px solid #2222a5;
 }
 .wrapper .info-table-wrapper .info-table .row {
@@ -109,7 +109,7 @@
   width: 666px;
 }
 .wrapper .info-table-wrapper .info-table .row + .row {
-  border-top: 1px solid blue;
+  border-top: 2px solid #2222a5;
 }
 .wrapper .info-table-wrapper .info-table .row .cat {
   width: 177px;
@@ -178,9 +178,6 @@
 .wrapper .extra ul li {
   list-style: disc;
   margin-left: 44px;
-}
-.wrapper .extra ul li + li {
-  margin-top: 11px;
 }
 #burger-menu {
   display: none;

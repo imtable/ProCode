@@ -1,4 +1,4 @@
-a:4:{s:4:"root";s:24:"./assets/less/style.less";s:8:"compiled";s:24553:".title {
+a:4:{s:4:"root";s:24:"./assets/less/style.less";s:8:"compiled";s:24508:".title {
   width: 333px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -98,7 +98,7 @@ a:4:{s:4:"root";s:24:"./assets/less/style.less";s:8:"compiled";s:24553:".title {
 }
 .wrapper .info-table-wrapper .info-table {
   background-color: #f7f7f1;
-  border: 1px solid blue;
+  border: 2px solid #2222a5;
   border-left: 7px solid #2222a5;
 }
 .wrapper .info-table-wrapper .info-table .row {
@@ -109,7 +109,7 @@ a:4:{s:4:"root";s:24:"./assets/less/style.less";s:8:"compiled";s:24553:".title {
   width: 666px;
 }
 .wrapper .info-table-wrapper .info-table .row + .row {
-  border-top: 1px solid blue;
+  border-top: 2px solid #2222a5;
 }
 .wrapper .info-table-wrapper .info-table .row .cat {
   width: 177px;
@@ -178,9 +178,6 @@ a:4:{s:4:"root";s:24:"./assets/less/style.less";s:8:"compiled";s:24553:".title {
 .wrapper .extra ul li {
   list-style: disc;
   margin-left: 44px;
-}
-.wrapper .extra ul li + li {
-  margin-top: 11px;
 }
 #burger-menu {
   display: none;
@@ -1018,4 +1015,4 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
-";s:5:"files";a:5:{s:51:"/Applications/MAMP/htdocs/hw/assets/less/style.less";i:1613138132;s:52:"/Applications/MAMP/htdocs/hw/assets/less/blocks.less";i:1613140029;s:53:"/Applications/MAMP/htdocs/hw/assets/less/screens.less";i:1608635113;s:56:"/Applications/MAMP/htdocs/hw/assets/less/animations.less";i:1607176990;s:52:"/Applications/MAMP/htdocs/hw/assets/less/modals.less";i:1608634744;}s:7:"updated";i:1613140030;}
+";s:5:"files";a:5:{s:51:"/Applications/MAMP/htdocs/hw/assets/less/style.less";i:1613138132;s:52:"/Applications/MAMP/htdocs/hw/assets/less/blocks.less";i:1613140396;s:53:"/Applications/MAMP/htdocs/hw/assets/less/screens.less";i:1608635113;s:56:"/Applications/MAMP/htdocs/hw/assets/less/animations.less";i:1607176990;s:52:"/Applications/MAMP/htdocs/hw/assets/less/modals.less";i:1608634744;}s:7:"updated";i:1613140397;}
