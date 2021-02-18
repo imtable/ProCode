@@ -54,6 +54,9 @@ a {
   align-items: center;
   width: 45%;
 }
+.header .header_wrapper .header_leftside .logo svg path {
+  fill: white;
+}
 .header .header_wrapper .header_leftside .header_menu ul {
   display: flex;
   color: white;
@@ -112,8 +115,8 @@ a {
   margin-top: 22px;
   color: white;
   font-size: 1.5rem;
-  line-height: 1.5rem;
-  width: 50%;
+  line-height: 2rem;
+  width: 800px;
 }
 .main .article .article_body {
   padding: 55px 30px;
@@ -150,11 +153,11 @@ a {
 }
 .main .article .article_body .article_start .article_start_right .article_start_right-text p {
   width: 322px;
-  margin-top: 11px;
+  margin-top: 22px;
 }
 .main .article .article_body .article_start .article_start_right .article_start_right-text .btn {
   display: inline-block;
-  margin-top: 11px;
+  margin-top: 33px;
   padding: 11px 22px;
   background-color: gray;
   color: white;

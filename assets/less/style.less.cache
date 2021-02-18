@@ -1,4 +1,4 @@
-a:4:{s:4:"root";s:24:"./assets/less/style.less";s:8:"compiled";s:5227:"body {
+a:4:{s:4:"root";s:24:"./assets/less/style.less";s:8:"compiled";s:5302:"body {
   overflow-x: hidden;
   font-family: sans-serif;
   background-color: #262626;
@@ -53,6 +53,9 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 45%;
+}
+.header .header_wrapper .header_leftside .logo svg path {
+  fill: white;
 }
 .header .header_wrapper .header_leftside .header_menu ul {
   display: flex;
@@ -112,8 +115,8 @@ a {
   margin-top: 22px;
   color: white;
   font-size: 1.5rem;
-  line-height: 1.5rem;
-  width: 50%;
+  line-height: 2rem;
+  width: 800px;
 }
 .main .article .article_body {
   padding: 55px 30px;
@@ -150,11 +153,11 @@ a {
 }
 .main .article .article_body .article_start .article_start_right .article_start_right-text p {
   width: 322px;
-  margin-top: 11px;
+  margin-top: 22px;
 }
 .main .article .article_body .article_start .article_start_right .article_start_right-text .btn {
   display: inline-block;
-  margin-top: 11px;
+  margin-top: 33px;
   padding: 11px 22px;
   background-color: gray;
   color: white;
@@ -239,4 +242,4 @@ a {
   background-color: #262626;
   color: white;
 }
-";s:5:"files";a:1:{s:51:"/Applications/MAMP/htdocs/hw/assets/less/style.less";i:1613661812;}s:7:"updated";i:1613661814;}
+";s:5:"files";a:1:{s:51:"/Applications/MAMP/htdocs/hw/assets/less/style.less";i:1613662210;}s:7:"updated";i:1613662215;}
