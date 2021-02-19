@@ -1,0 +1,275 @@
+a:4:{s:4:"root";s:24:"./assets/less/style.less";s:8:"compiled";s:5844:"body {
+  overflow-x: hidden;
+  font-family: sans-serif;
+  background-color: #262626;
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.card {
+  padding: 22px;
+}
+.card .card_title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.card p {
+  margin: 22px 0;
+}
+.card .card_code {
+  width: 455px;
+  padding: 22px;
+  background-color: black;
+  color: #baba00;
+}
+.card .card_code .card_code_tab-gap {
+  margin-left: 22px;
+}
+.card .card_code .card_code_blue {
+  color: lightblue;
+}
+.card .card_code .card_code_comment {
+  color: gray;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(111,111,111,0.45);
+  z-index: 222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .modal-wrapper {
+  width: 555px;
+  height: 333px;
+  background-color: pink;
+  padding-top: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 11px;
+  border: 3px solid lightgreen;
+}
+.wrapper {
+  position: relative;
+}
+.header {
+  box-shadow: inset 0 -2px 5px #000000;
+  background-color: rgba(0,0,0,0.45);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 111;
+}
+.header .header_wrapper {
+  max-width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header_wrapper .header_leftside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+}
+.header .header_wrapper .header_leftside .logo svg path {
+  fill: white;
+}
+.header .header_wrapper .header_leftside .header_menu ul {
+  display: flex;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.header .header_wrapper .header_leftside .header_menu ul li + li {
+  margin-left: 22px;
+}
+.header .header_wrapper .header_rightside a + a {
+  margin-left: 5px;
+}
+.main {
+  margin-top: 55px;
+  padding-top: 15px;
+  position: relative;
+}
+.main::after {
+  content: "";
+  position: absolute;
+  top: -113px;
+  left: 0;
+  width: 100%;
+  height: 466px;
+  z-index: -1;
+  background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%);
+}
+.main .site-nav a {
+  color: white;
+}
+.main .article .article_title {
+  margin-top: 11px;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.main .article .author {
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+}
+.main .article .author .author_pic img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.main .article .author .author_name {
+  color: white;
+  margin-left: 11px;
+  font-weight: bold;
+}
+.main .article .author .author_date {
+  color: white;
+  margin-left: 5px;
+}
+.main .article .article_intro {
+  margin-top: 22px;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 800px;
+}
+.main .article .article_body {
+  padding: 55px 30px;
+  margin-top: 55px;
+  background-color: white;
+  border-radius: 5px;
+}
+.main .article .article_body .article_start {
+  display: flex;
+  justify-content: space-between;
+}
+.main .article .article_body .article_start .article_start_left {
+  width: 50%;
+}
+.main .article .article_body .article_start .article_start_left ul {
+  list-style-type: disc;
+  padding: 0 30px;
+  text-decoration: underline;
+  font-size: 2rem;
+}
+.main .article .article_body .article_start .article_start_left ul li {
+  font-weight: bold;
+}
+.main .article .article_body .article_start .article_start_left ul li + li {
+  margin-top: 22px;
+}
+.main .article .article_body .article_start .article_start_right {
+  display: flex;
+  justify-content: space-between;
+}
+.main .article .article_body .article_start .article_start_right .article_start_right-text h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.main .article .article_body .article_start .article_start_right .article_start_right-text p {
+  width: 322px;
+  margin-top: 22px;
+}
+.main .article .article_body .article_start .article_start_right .article_start_right-text .btn {
+  display: inline-block;
+  margin-top: 33px;
+  padding: 11px 22px;
+  background-color: gray;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 3px;
+}
+.main .article .article_body .article_start .article_start_right .article_start_right-img img {
+  width: 333px;
+  height: 333px;
+}
+.main .article_sides {
+  display: flex;
+  justify-content: space-between;
+}
+.main .article_sides .article_side-img {
+  width: 350px;
+  height: 133px;
+}
+.main .article_sides .article_side-text {
+  font-weight: bold;
+  font-size: 2rem;
+  width: 444px;
+  margin: 22px 0;
+}
+.main .article_sides .article_leftside {
+  width: 48%;
+}
+.main .article_sides .article_leftside .card {
+  background: linear-gradient(rgba(156,39,176,0.2),#fff);
+}
+.main .article_sides .article_rightside {
+  width: 48%;
+}
+.main .article_sides .article_rightside .card {
+  background: linear-gradient(rgba(255,138,0,0.2),#fff);
+}
+.main .article_end {
+  margin-top: 55px;
+}
+.main .article_end .article_end_list {
+  list-style-type: disc;
+  padding: 0 30px;
+  text-decoration: underline;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.main .article_end .article_end_list li {
+  font-weight: bold;
+}
+.main .article_end .article_end_list li + li {
+  margin-top: 22px;
+}
+.main .article_end h3 {
+  margin-top: 22px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.main .article_end p {
+  margin: 33px 0;
+}
+.main .article_end .article_end_display-list {
+  padding: 0 20px;
+  list-style-type: disc;
+  margin: 22px 0;
+}
+.main .article_end .article_end_display-list li + li {
+  margin-top: 11px;
+}
+.main .article_end .article_end_table {
+  margin-top: 22px;
+  border-spacing: 0;
+  width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 8px;
+}
+.main .article_end .article_end_table tr th,
+.main .article_end .article_end_table tr td {
+  border: 1px solid #bebebe;
+  padding: 11px;
+}
+.main .article_end .article_end_table .table-header {
+  background-color: #262626;
+  color: white;
+}
+";s:5:"files";a:1:{s:51:"/Applications/MAMP/htdocs/hw/assets/less/style.less";i:1613773147;}s:7:"updated";i:1613773161;}
