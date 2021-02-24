@@ -1,6 +1,6 @@
 body {
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
 }
 
 .container {
@@ -32,6 +32,11 @@ body {
   color: #0000cc;
 }
 
+.main {
+  background-color: rgba(220, 190, 100, 0.4);
+  padding-top: 43px;
+}
+
 .btn {
   border: none;
   background-color: red;
@@ -40,22 +45,12 @@ body {
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  padding: 11px 55px;
+  padding: 11px 60px;
+  cursor: pointer;
 }
 
 .btn:hover, .btn:focus {
-  background-color: #eb6ceb;
-}
-
-.btn-2 {
-  text-decoration: none;
-  background: #70c217;
-  padding: 22px 29px;
-  display: inline-block;
-}
-
-.btn-2:hover, .btn-2:focus {
-  background-color: #63ab14;
+  background-color: #e60000;
 }
 
 .header {
@@ -192,11 +187,6 @@ body {
           transform: scale(1.2);
 }
 
-.main {
-  background-color: rgba(220, 190, 100, 0.4);
-  padding-top: 43px;
-}
-
 .search .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -297,7 +287,8 @@ body {
 }
 
 .search .search_rightside .search-form .search-form_select {
-  width: 176px;
+  width: 168px;
+  margin-left: 8px;
 }
 
 .search .search_rightside .search-form .search-form_last-row {
@@ -320,13 +311,6 @@ body {
 }
 
 .search .search_rightside .search-form .search-form_last-row .search-form_btn {
-  border: none;
-  background-color: red;
-  color: white;
-  border-radius: 20px;
-  font-weight: 500;
-  font-size: 18px;
-  padding: 11px 60px;
   margin-left: 13px;
 }
 
@@ -359,6 +343,7 @@ body {
 .guide .guide_steps .guide_step .guide_step-top .guide_step-number {
   color: red;
   font-weight: 700;
+  margin-right: 4px;
 }
 
 .guide .guide_steps .guide_step .guide_step-img {
@@ -491,11 +476,11 @@ body {
 }
 
 .footer .footer_contacts .footer_phone + .footer_phone {
-  margin-left: 68px;
+  margin-left: 73px;
 }
 
 .footer .footer_contacts .footer_phone .phone-number span + span {
-  margin-left: 8px;
+  margin-left: 3px;
 }
 
 .footer .footer_contacts .footer_phone .footer_email {
