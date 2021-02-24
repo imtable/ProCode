@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>easyEat</title>
+	<link rel="stylesheet" href="./styles/style.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header_top">
+				<div class="container">
+					<a class="logo" href="#"><img src="./img/logo.png" alt="logo" /></a>
+					<div class="header_rightside">
+						<div class="header-login">
+							<a class="header-login_link link" href="#">Войти</a>
+							<img class="header-login_userpic" src="./img/icon-login.png" alt="userpic" />
+						</div>
+						<div class="page-search">
+							<div class="page-search_form">
+								<input class="page-search_field" type="search" placeholder="Поиск" />
+								<a href="#" class="page-search_submit"><img src="./img/icon-search.png" alt="search" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header_bottom">
+				<div class="container">
+					<nav class="page-tabs">
+						<a class="page-tabs_home"><img src="./img/icon-home.png" alt="tab-home" /></a>
+						<ul class="page-tabs_wrapper">
+							<li class="page-tabs_tab"><a href="#">Рестораны</a></li>
+							<li class="page-tabs_tab"><a href="#">Доставка</a></li>
+							<li class="page-tabs_tab"><a href="#">Рейтинг</a></li>
+							<li class="page-tabs_tab"><a href="#">О нас</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<section class="section search">
+				<div class="container">
+					<div class="search_leftside">
+						<div class="search_text-1"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo maxime consectetur <p class="search_important-text-1">nulla at officiis</p>
+						</div>
+						<div class="search_text-2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, unde officiis corporis iure quas laboriosam porro <span class="search_important-text-2">quam</span> voluptatibus quos sequi? </div>
+					</div>
+					<div class="search_rightside">
+						<h2 class="search_title">Поиск ресторана</h2>
+						<p class="search_text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aliquid quaerat perferendis ut distinctio nostrum </p>
+						<form class="search-form">
+							<div class="search-form_row">
+								<input class="search-form_address" type="text" placeholder="Укажите адрес" />
+							</div>
+							<div class="search-form_row">
+								<input class="search-form_meal" type="text" placeholder="Какое блюдо?" />
+								<select class="search-form_select" name="select" id="select">
+									<option value="delivery">Доставка</option>
+									<option value="selfdel">Самовывоз</option>
+								</select>
+							</div>
+							<div class="search-form_row search-form_last-row">
+								<input class="search-form_checkbox" type="checkbox" checked="checked" id="search-form_checkbox" />
+								<label>С возможностью бронировать столик</label>
+								<button class="search-form_btn btn">Найти</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="section guide">
+				<div class="container">
+					<h2 class="guide_title title">Всего три действия!</h2>
+					<div class="guide_steps">
+						<div class="guide_step">
+							<p class="guide_step-top"><span class="guide_step-number">1.</span> Поиск </p>
+							<div class="guide_step-img"><img src="./img/buran.jpg" alt="guide_step" /></div>
+							<p class="guide_step-bottom">some text some text some text some text some text</p>
+						</div>
+						<div class="guide_step">
+							<p class="guide_step-top">
+								<span class="guide_step-number">1.</span>Поиск</p>
+							<div class="guide_step-img">
+								<img src="./img/buran.jpg" alt="guide_step" />
+							</div>
+							<p class="guide_step-bottom">some text some text some text some text some text</p>
+						</div>
+						<div class="guide_step">
+							<p class="guide_step-top">
+								<span class="guide_step-number">1.</span>Поиск</p>
+							<div class="guide_step-img">
+								<img src="./img/buran.jpg" alt="guide_step" />
+							</div>
+							<p class="guide_step-bottom">some text some text some text some text some text</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section partners">
+				<div class="container">
+					<h2 class="partners_title title">Наши партнёры</h2>
+					<div class="partners_items">
+						<a class="partners_item" href="#">
+							<img src="./img/spacex.jpg" alt="partners" />
+						</a>
+						<a class="partners_item" href="#">
+							<img src="./img/spacex.jpg" alt="partners" />
+						</a>
+						<a class="partners_item" href="#">
+							<img src="./img/spacex.jpg" alt="partners" />
+						</a>
+						<a class="partners_item" href="#">
+							<img src="./img/spacex.jpg" alt="partners" />
+						</a>
+						<a class="partners_item" href="#">
+							<img src="./img/spacex.jpg" alt="partners" />
+						</a>
+					</div>
+				</div>
+			</section>
+			<footer class="footer">
+				<div class="container">
+					<nav class="page-tabs">
+						<ul class="page-tabs_wrapper">
+							<li class="page-tabs_tab"><a href="#">Рестораны</a></li>
+							<li class="page-tabs_tab"><a href="#">Доставка</a></li>
+							<li class="page-tabs_tab"><a href="#">Рейтинг</a></li>
+							<li class="page-tabs_tab"><a href="#">О нас</a></li>
+							<li class="page-tabs_tab"><a href="#">Контакты</a></li>
+						</ul>
+						<p class="page-tabs_text"> Easy eat – скидки в ресторанах твоего города! </p>
+					</nav>
+					<div class="footer_contacts">
+						<div class="footer_phone">
+							<div class="phone-number">
+								<span>+ 7</span>
+								<span>777</span>
+								<span>777</span>
+								<span>77</span>
+								<span>77</span>
+							</div>
+							<div class="footer_email">
+								<a href="#">easyeat@gmail.com</a>
+							</div>
+						</div>
+						<div class="footer_phone">
+							<div class="phone-number">
+								<span>+ 7</span>
+								<span>777</span>
+								<span>777</span>
+								<span>77</span>
+								<span>77</span>
+							</div>
+							<div class="footer_email">
+								<a href="#">easyeat@gmail.com</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</main>
+	</div>
+</body>
+
+</html>
