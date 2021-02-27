@@ -211,7 +211,7 @@ a {
 }
 
 .main .item-wrapper .item + .item {
-  margin-top: 28px;
+  margin-top: 27px;
 }
 
 .main .item-wrapper .item .item-img img {
@@ -231,7 +231,7 @@ a {
 }
 
 .main .item-wrapper .item .item-info .row-1 .item-link {
-  margin-left: 11px;
+  margin-left: 10px;
 }
 
 .main .item-wrapper .item .item-info .row-2 {
@@ -326,7 +326,7 @@ a {
 .main .item-wrapper .item-cont {
   text-align: center;
   display: block;
-  margin-top: 15px;
+  margin-top: 17px;
 }
 
 .footer {
