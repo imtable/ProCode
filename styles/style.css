@@ -860,6 +860,7 @@ a {
     display: inline-block;
     margin-top: 22px;
     margin-left: 0;
+    width: 350px;
   }
   .rewbal .container .prognosis .prognosis_body {
     padding: 10px 10px 10px 10px;
@@ -1094,9 +1095,10 @@ a {
     height: 201px;
   }
   .rewbal .container .prognosis {
-    display: inline-block;
+    display: block;
     margin-top: 22px;
     margin-left: 0;
+    width: 544px;
   }
   .rewbal .container .prognosis .prognosis_body {
     padding: 10px 10px 10px 10px;
