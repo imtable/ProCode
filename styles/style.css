@@ -57,7 +57,6 @@ a {
   border: 0.5px solid #E0E0E0;
   border-radius: 20px;
   background: linear-gradient(270deg, #162970 0%, #255390 99.28%);
-  box-shadow: 0px 8px 10px rgba(60, 84, 117, 0.15);
   color: white;
   padding: 11px 22px;
 }
@@ -204,6 +203,7 @@ a {
 .farm .farm_head .exchange_btn {
   padding: 12px 34px 12px 45px;
   position: relative;
+  box-shadow: 0px 8px 10px rgba(60, 84, 117, 0.15);
 }
 
 .farm .farm_head .exchange_btn span {
@@ -415,7 +415,7 @@ a {
 .rewbal .container .chart .chart-wrapper {
   margin-top: 9px;
   background: white;
-  padding: 22px 20px;
+  padding: 22px 20px 16px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
 }
 
@@ -541,7 +541,7 @@ a {
 }
 
 .stat {
-  margin-top: 27px;
+  margin-top: 31px;
 }
 
 .stat .container {
