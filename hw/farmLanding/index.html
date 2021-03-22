@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>farmLanding</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="container">
+				<div class="menu-wrapper">
+					<a class="burger"><img src="./img/burger.png" alt="menu"></a>
+					<nav class="menu">
+						<a href="#" class="btn btn-header active">
+							<img src="./img/btn-header_myfarm.png" alt="btn">
+							<span>моя ферма</span>
+						</a>
+						<a href="#" class="btn btn-header">
+							<img src="./img/btn-header_acc.png" alt="btn">
+							<span>аккаунт</span>
+						</a>
+						<a href="#" class="btn btn-header">
+							<img src="./img/btn-header_settings.png" alt="btn">
+							<span>настройки</span>
+						</a>
+						<a href="#" class="btn btn-header">
+							<img src="./img/btn-header_help.png" alt="btn">
+							<span>помощь</span>
+						</a>
+					</nav>
+				</div>
+				<div class="login">
+					<a href="#" class="userpic"><img src="./img/userpic.png" alt="userpic"></a>
+					<a href="#" class="nickname">
+						<span>NickOcean</span>
+						<img src="./img/icon_login.svg" alt="arrow">
+					</a>
+				</div>
+			</div>
+		</div>
+		<main class="main">
+			<section class="farm">
+				<div class="container">
+					<div class="farm_head">
+						<div class="farm_leftside">
+							<h1 class="title farm_title">МОЯ ФЕРМА</h1>
+							<div class="exchange">
+								<div class="currency">
+									<img src="./img/icon_litecoin.svg" alt="currency">
+									<span class="exchange_name">LTC</span>
+									<span class="exchange_value">$160,43</span>
+								</div>
+								<div class="currency">
+									<img src="./img/icon_bitcoin.svg" alt="currency">
+									<span class="exchange_name">BTC</span>
+									<span class="exchange_value">$8 545,00</span>
+								</div>
+								<div class="currency">
+									<img src="./img/icon_ethereum.svg" alt="currency">
+									<span class="exchange_name">ETH</span>
+									<span class="exchange_value">$533,00</span>
+								</div>
+							</div>
+						</div>
+						<a href="#" class="exchange_btn btn-2"><span>+</span> Добавить валюту</a>
+					</div>
+					<div class="farm_currency">
+						<div class="item item_summary">
+							<div class="item_body">
+								<div class="item_info">
+									<div class="item_title">
+										<span>Суммарный баланс</span>
+										<span class="item_title-short"></span>
+									</div>
+									<div class="item_speed">
+										<img src="./img/dot.svg" alt="dynamic">
+										<span>1.245008<span class="item_speed-small">BTC</span></span>
+									</div>
+									<p class="item_bal">15 678 USD</p>
+								</div>
+								<div class="item_img">
+									<img src="./img/icon_question.svg" alt="icon" class="item_icon">
+								</div>
+							</div>
+							<div class="item_btn-wrapper">
+								<a href="#" class="item_btn-1 btn"><img src="./img/btn-binance.svg" alt="btn"></a>
+								<a href="#" class="item_btn-2 btn"><img src="./img/btn-buysell.svg" alt="btn"></a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item_body">
+								<div class="item_info">
+									<div class="item_title">
+										<span>Litecoin</span>
+										<span class="item_title-short">LTC</span>
+									</div>
+									<div class="item_speed">
+										<img src="./img/icon_speed-gray.svg" alt="dynamic">
+										<span>24 <span class="item_speed-small">MH/S</span></span>
+									</div>
+									<p class="item_bal">0.15000000 LTC</p>
+								</div>
+								<div class="item_img">
+									<img src="./img/icon_litecoin-big.svg" alt="icon" class="item_icon">
+									<img src="./img/item_graph.png" alt="graph" class="item_graph">
+								</div>
+							</div>
+							<div class="item_btn-wrapper">
+								<input type="radio">
+								<span>Автопокупка хешрейта <span>(3 Mh/s)</span></span>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item_body">
+								<div class="item_info">
+									<div class="item_title">
+										<span>Bitcoin</span>
+										<span class="item_title-short">BTC</span>
+									</div>
+									<div class="item_speed">
+										<img src="./img/icon_speed-gray.svg" alt="dynamic">
+										<span>24 <span class="item_speed-small">MH/S</span></span>
+									</div>
+									<p class="item_bal">0.15000000 LTC</p>
+								</div>
+								<div class="item_img">
+									<img src="./img/icon_bitcoin-big.svg" alt="icon" class="item_icon">
+									<img src="./img/item_graph.png" alt="graph" class="item_graph">
+								</div>
+							</div>
+							<div class="item_btn-wrapper">
+								<input type="radio">
+								<span>Автопокупка хешрейта <span>(3 Mh/s)</span></span>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item_body">
+								<div class="item_info">
+									<div class="item_title">
+										<span>Ethereum</span>
+										<span class="item_title-short">ETH</span>
+									</div>
+									<div class="item_speed">
+										<img src="./img/icon_speed-gray.svg" alt="dynamic">
+										<span>24<span class="item_speed-small">MH/S</span></span>
+									</div>
+									<p class="item_bal">0.15000000 LTC</p>
+								</div>
+								<div class="item_img">
+									<img src="./img/icon_etherum-big.svg" alt="icon" class="item_icon">
+									<img src="./img/item_graph.png" alt="graph" class="item_graph">
+								</div>
+							</div>
+							<div class="item_btn-wrapper">
+								<input type="radio">
+								<span>Автопокупка хешрейта <span>(3 Mh/s)</span></span>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item_body">
+								<div class="item_info">
+									<div class="item_title">
+										<span>Dash</span>
+										<span class="item_title-short">Dash</span>
+									</div>
+									<div class="item_speed">
+										<img src="./img/icon_speed-blue.svg" alt="dynamic">
+										<span>0<span class="item_speed-small">MH/S</span></span>
+									</div>
+									<p class="item_bal">0.15000000 Dash</p>
+								</div>
+								<div class="item_img">
+									<img src="./img/icon_dash.svg" alt="icon" class="item_icon">
+									<img src="./img/item_graph.png" alt="graph" class="item_graph">
+								</div>
+							</div>
+							<div class="item_btn-wrapper">
+								<input type="radio">
+								<span>Автопокупка хешрейта <span>(3 Mh/s)</span></span>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item_body">
+								<div class="item_info">
+									<div class="item_title">
+										<span>Monero</span>
+										<span class="item_title-short">XML</span>
+									</div>
+									<div class="item_speed">
+										<img src="./img/icon_speed-blue.svg" alt="dynamic">
+										<span>24 <span class="item_speed-small">MH/S</span></span>
+									</div>
+									<p class="item_bal">0.15000000 LTC</p>
+								</div>
+								<div class="item_img">
+									<img src="./img/icon_monero.svg" alt="icon" class="item_icon">
+									<img src="./img/item_graph.png" alt="graph" class="item_graph">
+								</div>
+							</div>
+							<div class="item_btn-wrapper">
+								<input type="radio">
+								<span>Автопокупка хешрейта <span>(3 Mh/s)</span></span>
+							</div>
+						</div>
+					</div>
+					<div class="summary">
+						<div class="summary_item">
+							<p class="summary_title">Общий баланс</p>
+							<div class="summary_text">
+								<svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="3" cy="3" r="3" fill="#27AE60" />
+								</svg>
+								<span>1.245<span class="summary_text-small">BTC</span></span>
+							</div>
+						</div>
+						<div class="summary_item">
+							<p class="summary_title">Начисления</p>
+							<div class="summary_text">
+								<svg width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="3.07959" cy="3" r="3" fill="url(#paint0_linear)" />
+									<defs>
+										<linearGradient id="paint0_linear" x1="3.07959" y1="0" x2="3.07959" y2="6" gradientUnits="userSpaceOnUse">
+											<stop stop-color="#2D9CDB" />
+											<stop offset="1" stop-color="#255F80" />
+										</linearGradient>
+									</defs>
+								</svg>
+								<span>0.114<span class="summary_text-small">BTC</span></span>
+							</div>
+						</div>
+						<div class="summary_item">
+							<p class="summary_title">Обслуживания</p>
+							<div class="summary_text">
+								<svg width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="3.07959" cy="3" r="3" fill="#F2994A" />
+								</svg>
+								<span>0.087<span class="summary_text-small">BTC</span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="rewbal">
+				<div class="container">
+					<div class="chart">
+						<h3 class="title chart_title">Начисления и баланс</h3>
+						<div class="chart-wrapper">
+							<div class="chart_head">
+								<div class="chart_currency">
+									<a href="#" class="chart_btn">USD</a>
+									<a href="#" class="chart_btn active"> BTC <svg width="56" height="23" viewBox="0 0 56 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.5 1.47656H51C53.4853 1.47656 55.5 3.49128 55.5 5.97656V17.9766C55.5 20.4618 53.4853 22.4766 51 22.4766H0.5V1.47656Z" stroke="url(#paint0_linear)" />
+											<defs>
+												<linearGradient id="paint0_linear" x1="56" y1="11.9766" x2="0.404332" y2="11.9766" gradientUnits="userSpaceOnUse">
+													<stop stop-color="#162970" />
+													<stop offset="1" stop-color="#255390" />
+												</linearGradient>
+											</defs>
+										</svg>
+									</a>
+								</div>
+								<div class="chart_period">
+									<a href="#" class="chart_btn">2 недели</a>
+									<a href="#" class="chart_btn active">Неделя <svg width="77" height="22" viewBox="0 0 77 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.5 0.5H72C74.4853 0.5 76.5 2.51472 76.5 5V17C76.5 19.4853 74.4853 21.5 72 21.5H0.5V0.5Z" stroke="url(#paint0_linear)" />
+											<defs>
+												<linearGradient id="paint0_linear" x1="77" y1="11" x2="0.555956" y2="11" gradientUnits="userSpaceOnUse">
+													<stop stop-color="#162970" />
+													<stop offset="1" stop-color="#255390" />
+												</linearGradient>
+											</defs>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<img src="./img/chart_graph.svg" alt="chart" class="chart_graph">
+						</div>
+					</div>
+					<div class="prognosis">
+						<div class="prognosis_head">
+							<h3 class="title prognosis_title">Прогноз доходности</h3>
+							<img src="./img/icon_question-red.svg" alt="info">
+						</div>
+						<div class="prognosis_body">
+							<div class="item">
+								<p class="item_date">День</p>
+								<p class="item_value"><img src="./img/dot.svg" alt="dot"> 0.000000 BTC = 0.00 USD</p>
+							</div>
+							<div class="item">
+								<p class="item_date">Неделя</p>
+								<p class="item_value"><img src="./img/dot.svg" alt="dot">0.000000 BTC = 1000.00 USD</p>
+							</div>
+							<div class="item">
+								<p class="item_date">Месяц</p>
+								<p class="item_value"><img src="./img/dot.svg" alt="dot">0.000000 BTC = 50,000.00 USD</p>
+							</div>
+							<div class="item">
+								<p class="item_date">Год</p>
+								<p class="item_value"><img src="./img/dot.svg" alt="dot">0.000000 BTC = 0.00 USD</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="stat">
+				<div class="container">
+					<div class="stat_body">
+						<h3 class="stat_title title">Статистика аккаунта</h3>
+						<div class="stat_btn-wrapper">
+							<a href="#" class="stat_btn active">All</a>
+							<a href="#" class="stat_btn">Rewards</a>
+							<a href="#" class="stat_btn">Maintenance</a>
+							<a href="#" class="stat_btn">Balance</a>
+							<a href="#" class="stat_btn">Withdrawals</a>
+							<a href="#" class="stat_btn">Contacts</a>
+						</div>
+						<div class="table">
+							<div class="table_row">
+								<div class="table_title">
+									<div class="table_head"><span>Тариф</span><img src="./img/icon_sort.svg" alt="sort"></div>
+									<span class="table_name">BTC Optimal</span>
+									<span class="table_status">Активен</span>
+								</div>
+								<div class="table_date">
+									<div class="table_head"><span>Дата</span><img src="./img/icon_sort.svg" alt="sort"></div>
+									<span>28.02.2018</span>
+								</div>
+								<div class="table_time">
+									<div class="table_head"><span>Время</span><img src="./img/icon_sort.svg" alt="sort"></div>
+									<span>03:13:26</span>
+								</div>
+								<div class="table_sum">
+									<div class="table_head"><span>Сумма</span><img src="./img/icon_sort.svg" alt="sort"></div>
+									<img src="./img/icon_dynamic.png" alt="dynamic">
+									<span class="table_sum-1">0.250134 BTC</span>
+									<span class="table_sum-2">3 145 USD</span>
+								</div>
+							</div>
+							<div class="table_row table_row-2">
+								<div class="table_title">
+									<span class="table_name">BTC Optimal</span>
+									<span class="table_status ended">Заканчивается</span>
+								</div>
+								<div class="table_date"><span>28.02.2018</span></div>
+								<div class="table_time"><span>03:13:26</span></div>
+								<div class="table_sum">
+									<img src="./img/icon_dynamic-down.png" alt="dynamic">
+									<span class="table_sum-1">0.250134 BTC</span>
+									<span class="table_sum-2">3 145 USD</span>
+								</div>
+							</div>
+							<div class="table_row table_row-3">
+								<div class="table_title">
+									<span class="table_name">BTC Optimal</span>
+									<span class="table_status ended">Заканчивается</span>
+								</div>
+								<div class="table_date"><span>28.02.2018</span></div>
+								<div class="table_time"><span>03:13:26</span></div>
+								<div class="table_sum">
+									<img src="./img/icon_dynamic-down.png" alt="dynamic">
+									<span class="table_sum-1">0.250134 BTC</span>
+									<span class="table_sum-2">3 145 USD</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contacts">
+						<h3 class="title contacts-title">Мои контракты</h3>
+						<div class="contacts_body">
+							<div class="item">
+								<div class="item_head">
+									<p class="item_title">Custom BTC</p>
+									<p class="item_speed">2 TH/s</p>
+								</div>
+								<div class="item_body">
+									<p class="item_status">Активен</p>
+									<p class="item_date">10.15.2018 — 10.15.2019</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="item_head">
+									<p class="item_title">Preorder LTC</p>
+									<p class="item_speed">6 TH/s</p>
+								</div>
+								<div class="item_body">
+									<p class="item_status ended">Заканчивается</p>
+									<p class="item_date">10.15.2018 — 10.15.2019</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="item_head">
+									<p class="item_title">Preorder Dash</p>
+									<p class="item_speed">6 TH/s</p>
+								</div>
+								<div class="item_body">
+									<p class="item_status ended">Заканчивается</p>
+									<p class="item_date">10.15.2018 — 10.15.2019</p>
+								</div>
+							</div>
+							<div class="contacts_btn-body">
+								<a href="#" class="contacts_btn btn-2"><span>...</span> Показать все</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<span class="copy">SibHash.com 2018</span>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+a {
+   text-decoration: none;
+   color: black;
+}
+
+.wrapper {
+   margin: 0 auto;
+   padding: 15px;
+   width: 1500px;
+   background: lightgray;
+}
+
+.header {
+   width: 1400px;
+
+   .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 11px;
+
+      .menu-1 {
+         display: flex;
+
+         .item {
+            &+.item {
+               margin-left: 11px;
+            }
+
+            &:hover {
+               background: lighten(lightgray, 15%);
+            }
+         }
+      }
+
+      .menu-2 {
+         display: flex;
+
+         .item {
+            &+.item {
+               margin-left: 11px;
+            }
+
+            &:hover {
+               background: lighten(lightgray, 15%);
+            }
+         }
+      }
+   }
+
+   .mid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .leftside {
+         display: flex;
+         align-items: center;
+
+         .logo {
+            img {
+               width: 99px;
+            }
+         }
+
+         .search {
+            margin-left: 11px;
+         }
+      }
+
+      .rightside {
+         display: flex;
+         align-items: center;
+
+         .phone {
+            display: flex;
+            align-items: center;
+
+            p {
+               margin-left: 5px;
+            }
+         }
+
+         .login {
+            margin-left: 22px;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            &::after {
+               content: '';
+               position: absolute;
+               top: 15px;
+               left: -12px;
+               width: 2px;
+               height: 22px;
+               background-color: black;
+            }
+
+            p {
+               margin-left: 5px;
+            }
+         }
+
+         .fave-cart {
+            margin-left: 33px;
+            display: flex;
+            align-items: center;
+
+            .cart {
+               margin-left: 5px;
+
+               img {
+                  width: 45px;
+               }
+            }
+         }
+      }
+   }
+
+   .low {
+      .menu {
+
+         .item {
+            background: rgb(140, 140, 140);
+            text-align: center;
+            display: inline-block;
+            width: calc(1400px/11 - 5px);
+
+            &+.item {
+               margin-left: 1px;
+            }
+
+            &:hover {
+               background: lighten(rgb(140, 140, 140), 15%);
+
+            }
+         }
+      }
+   }
+}
