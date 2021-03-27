@@ -10,132 +10,267 @@ a {
    background: lightgray;
 }
 
-.header {
-   width: 1400px;
+@keyframes ball-h {
+   0% {
+      top: 1px;
+   }
 
-   .top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 11px;
+   5% {
+      top: -50px;
+   }
 
-      .menu-1 {
-         display: flex;
+   10% {
+      top: -33px;
+   }
 
-         .item {
-            &+.item {
-               margin-left: 11px;
-            }
+   15% {
+      top: -75px;
+   }
 
-            &:hover {
-               background: lighten(lightgray, 15%);
-            }
+   20% {
+      top: -55px;
+   }
+
+   25% {
+      top: -90px;
+   }
+
+   30% {
+      top: -77px;
+   }
+
+   35% {
+      top: -115px;
+   }
+
+   40% {
+      top: -99px;
+   }
+
+   45% {
+      top: -115px;
+   }
+
+   50% {
+      top: -99px;
+   }
+
+   55% {
+      top: -115px;
+   }
+
+   60% {
+      top: -99px;
+   }
+
+   65% {
+      top: -115px;
+   }
+
+   70% {
+      top: -99px;
+   }
+
+   75% {
+      top: -115px;
+   }
+
+   90% {
+      left: -35px;
+   }
+
+   100% {
+      left: 0;
+   }
+}
+
+@keyframes ball-w {
+   0% {
+      left: 1px;
+   }
+
+   5% {
+      left: 45px;
+   }
+
+   10% {
+      left: 65px;
+   }
+
+   15% {
+      left: 111px;
+   }
+
+   20% {
+      left: 130px;
+   }
+
+   25% {
+      left: 175px;
+   }
+
+   30% {
+      left: 197px;
+   }
+
+   35% {
+      left: 240px;
+   }
+
+   40% {
+      left: 264px;
+   }
+
+   45% {
+      left: 240px;
+   }
+
+   50% {
+      left: 197px;
+   }
+
+   55% {
+      left: 175px;
+   }
+
+   60% {
+      left: 130px;
+   }
+
+   65% {
+      left: 111px;
+   }
+
+   70% {
+      left: 65px;
+   }
+
+   75% {
+      left: 45px;
+   }
+
+   90% {
+      left: 11px;
+   }
+
+   100% {
+      left: 0;
+   }
+}
+
+.anim {
+   display: flex;
+   align-items: flex-end;
+   padding: 111px 222px;
+   position: relative;
+
+   .ball {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid black;
+      background: greenyellow;
+      position: relative;
+      animation-name: ball-h, ball-w;
+      animation-duration: 10s;
+      animation-iteration-count: 1;
+      top: 1px;
+      left: 1px;
+   }
+
+   .step {
+      width: 44px;
+      background: tan;
+      margin-left: 22px;
+      position: relative;
+   }
+
+   .step-1 {
+      height: 33px;
+      animation-name: step-1;
+      animation-duration: 10s;
+      animation-iteration-count: 1;
+
+      @keyframes step-1 {
+         0% {
+            height: 33px;
          }
-      }
 
-      .menu-2 {
-         display: flex;
+         10% {
+            height: 33px;
+         }
 
-         .item {
-            &+.item {
-               margin-left: 11px;
-            }
+         50% {
+            height: 99px;
+         }
 
-            &:hover {
-               background: lighten(lightgray, 15%);
-            }
+         75% {
+            height: 99px;
+         }
+
+         100% {
+            height: 33px;
          }
       }
    }
 
-   .mid {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+   .step-2 {
+      height: 55px;
+      animation-name: step-2;
+      animation-duration: 10s;
+      animation-iteration-count: 1;
+      animation-delay: 1s;
 
-      .leftside {
-         display: flex;
-         align-items: center;
-
-         .logo {
-            img {
-               width: 99px;
-            }
+      @keyframes step-2 {
+         0% {
+            height: 55px;
          }
 
-         .search {
-            margin-left: 11px;
-         }
-      }
-
-      .rightside {
-         display: flex;
-         align-items: center;
-
-         .phone {
-            display: flex;
-            align-items: center;
-
-            p {
-               margin-left: 5px;
-            }
+         10% {
+            height: 55px;
          }
 
-         .login {
-            margin-left: 22px;
-            display: flex;
-            align-items: center;
-            position: relative;
-
-            &::after {
-               content: '';
-               position: absolute;
-               top: 15px;
-               left: -12px;
-               width: 2px;
-               height: 22px;
-               background-color: black;
-            }
-
-            p {
-               margin-left: 5px;
-            }
+         50% {
+            height: 99px;
          }
 
-         .fave-cart {
-            margin-left: 33px;
-            display: flex;
-            align-items: center;
-
-            .cart {
-               margin-left: 5px;
-
-               img {
-                  width: 45px;
-               }
-            }
+         90% {
+            height: 55px;
          }
       }
    }
 
-   .low {
-      .menu {
+   .step-3 {
+      height: 77px;
+      animation-name: step-3;
+      animation-duration: 10s;
+      animation-iteration-count: 1;
+      animation-delay: 2s;
 
-         .item {
-            background: rgb(140, 140, 140);
-            text-align: center;
-            display: inline-block;
-            width: calc(1400px/11 - 5px);
+      @keyframes step-3 {
+         0% {
+            height: 77px;
+         }
 
-            &+.item {
-               margin-left: 1px;
-            }
+         10% {
+            height: 77px;
+         }
 
-            &:hover {
-               background: lighten(rgb(140, 140, 140), 15%);
+         30% {
+            height: 99px;
+         }
 
-            }
+         75% {
+            height: 77px;
+         }
+
+         100% {
+            height: 77px;
          }
       }
+   }
+
+   .step-4 {
+      height: 99px;
    }
 }
