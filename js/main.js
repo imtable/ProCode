@@ -3,9 +3,12 @@ let hide = document.querySelector('.btn-hide');
 let popup = document.querySelector('.popup');
 
 show.addEventListener('click', (ev) => {
-   popup.classList.add('active');
+   if (popup.classList.contains('active')) {
+      popup.classList.remove('active');
+   } else {
+      popup.classList.add('active');
+   }
 });
-
 hide.addEventListener('click', (ev) => {
-   popup.classList.remove('active');
+   popup.classList.toggle('active');
 });
