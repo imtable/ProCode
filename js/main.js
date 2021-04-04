@@ -1,14 +1,16 @@
-let show = document.querySelector('.btn-show');
-let hide = document.querySelector('.btn-hide');
-let popup = document.querySelector('.popup');
+let btnSave = document.querySelector('.btn-save');
+let firstName = document.querySelector('.form_firstname');
+let lastName = document.querySelector('.form_lastname');
+let midName = document.querySelector('.form_midname');
 
-show.addEventListener('click', (ev) => {
-   if (popup.classList.contains('active')) {
-      popup.classList.remove('active');
-   } else {
-      popup.classList.add('active');
-   }
-});
-hide.addEventListener('click', (ev) => {
-   popup.classList.toggle('active');
+btnSave.addEventListener('click', (ev) => {
+   card = document.querySelector('.card:not(.show)');
+   let cardFirstName = document.querySelector('.card:not(.show) .card_firstname-value');
+   let cardLastName = document.querySelector('.card:not(.show) .card_lastname-value');
+   let cardMidName = document.querySelector('.card:not(.show) .card_midname-value');
+
+   cardFirstName.innerHTML = firstName.value;
+   cardLastName.innerHTML = lastName.value;
+   cardMidName.innerHTML = midName.value;
+   card.classList.add('show');
 });

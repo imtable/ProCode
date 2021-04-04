@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -10,44 +15,48 @@ a {
   background: lightgray;
 }
 
-.btn-wrapper {
-  padding: 22px;
+.form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.btn-wrapper .btn {
-  border: 1px solid black;
-  padding: 11px 55px;
-  font-weight: bold;
-  font-size: 22px;
-}
-
-.btn-wrapper .btn + .btn {
-  margin-left: 11px;
-}
-
-.btn-wrapper .btn:hover {
-  background: lightcyan;
-}
-
-.lorem {
-  margin-top: 22px;
-}
-
-.popup {
-  display: none;
-  width: 400px;
-  height: 300px;
-  background: lightcoral;
-  position: absolute;
-  z-index: 999;
-  top: calc(50% - 150px);
-  left: calc(50% - 200px);
-}
-
-.active {
+.form .input-wrapper label {
   display: block;
+}
+
+.form .input-wrapper label + label {
+  margin-top: 11px;
+}
+
+.form .input-wrapper label input {
+  width: 222px;
+}
+
+.form .btn-wrapper {
+  margin-left: 11px;
+  width: 222px;
+}
+
+.form .btn-wrapper .btn-save {
+  width: 100%;
+  height: 100%;
+  background: none;
+}
+
+.card {
+  display: none;
+  margin-top: 22px;
+  background: lightyellow;
+  width: 455px;
+  padding: 11px;
+}
+
+.card.show {
+  display: block;
+}
+
+.card p span {
+  margin-left: 5px;
 }
 /*# sourceMappingURL=style.css.map */
