@@ -4,54 +4,38 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>inputToCard</title>
+	<title>clearance</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
 	<link rel="stylesheet" href="styles/style.css" />
 </head>
 
 <body>
 	<div class="wrapper">
-		<p>Добавьте участника (максимум 5):</p>
-		<div class="form">
-			<div class="input-wrapper">
-				<label>
-					<input class="form_firstname" placeholder="Имя:" type="text">
-				</label>
-				<label>
-					<input class="form_lastname" placeholder="Фамилия:" type="text">
-				</label>
-				<label>
-					<input class="form_midname" placeholder="Отчество:" type="text">
-				</label>
+		<form class="clearance" id="clearance">
+			<div class="radio-body">
+				<input type="radio" name='radio' value="1" class="btn-radio" id="car"><label for="car" class="lbl-radio">car</label>
 			</div>
-			<div class="btn-wrapper">
-				<button class="btn-save">ok</button>
+			<div class="radio-body">
+				<input type="radio" name='radio' value="0.7" class="btn-radio" id="electro"><label for="electro" class="lbl-radio">electro</label>
 			</div>
-		</div>
-		<div class="card">
-			<p class="card_firstname">Имя:<span class="card_firstname-value"></span></p>
-			<p class="card_lastname">Фамилия:<span class="card_lastname-value"></span></p>
-			<p class="card_midname">Отчество:<span class="card_midname-value"></span></p>
-		</div>
-		<div class="card">
-			<p class="card_firstname">Имя:<span class="card_firstname-value"></span></p>
-			<p class="card_lastname">Фамилия:<span class="card_lastname-value"></span></p>
-			<p class="card_midname">Отчество:<span class="card_midname-value"></span></p>
-		</div>
-		<div class="card">
-			<p class="card_firstname">Имя:<span class="card_firstname-value"></span></p>
-			<p class="card_lastname">Фамилия:<span class="card_lastname-value"></span></p>
-			<p class="card_midname">Отчество:<span class="card_midname-value"></span></p>
-		</div>
-		<div class="card">
-			<p class="card_firstname">Имя:<span class="card_firstname-value"></span></p>
-			<p class="card_lastname">Фамилия:<span class="card_lastname-value"></span></p>
-			<p class="card_midname">Отчество:<span class="card_midname-value"></span></p>
-		</div>
-		<div class="card">
-			<p class="card_firstname">Имя:<span class="card_firstname-value"></span></p>
-			<p class="card_lastname">Фамилия:<span class="card_lastname-value"></span></p>
-			<p class="card_midname">Отчество:<span class="card_midname-value"></span></p>
+			<div class="radio-body">
+				<input type="radio" name='radio' value="1.2" class="btn-radio" id="bike"><label for="bike" class="lbl-radio">bike</label>
+			</div>
+			<div class="radio-body">
+				<input type="radio" name='radio' value="3" class="btn-radio" id="commerce"><label for="commerce" class="lbl-radio">commerce</label>
+			</div>
+			<span>Year:</span>
+			<select class="year" name="select">
+				<option class="option1" value="2005">2005</option>
+				<option class="option2" value="2006" selected>2006</option>
+				<option class="option3" value="2007">2007</option>
+			</select>
+			<input placeholder="Price:" class="price" type="text">
+			<button class="btn-submit" type="submit">calc</button>
+		</form>
+		<div class="result-body">
+			<span>Clearance: </span>
+			<span class="result"></span>
 		</div>
 	</div>
 	<script src="js/main.js"></script>

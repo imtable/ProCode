@@ -1,16 +1,19 @@
-let btnSave = document.querySelector('.btn-save');
-let firstName = document.querySelector('.form_firstname');
-let lastName = document.querySelector('.form_lastname');
-let midName = document.querySelector('.form_midname');
+const form = document.forms.clearance;
 
-btnSave.addEventListener('click', (ev) => {
-   let card = document.querySelector('.card:not(.show)');
-   let cardFirstName = document.querySelector('.card:not(.show) .card_firstname-value');
-   let cardLastName = document.querySelector('.card:not(.show) .card_lastname-value');
-   let cardMidName = document.querySelector('.card:not(.show) .card_midname-value');
+const calc = (price, type, year) => {
+   const result = (price * type) * (year / 100);
+   return result.toFixed(2);
+}
 
-   cardFirstName.innerHTML = firstName.value;
-   cardLastName.innerHTML = lastName.value;
-   cardMidName.innerHTML = midName.value;
-   card.classList.add('show');
+form.addEventListener('submit', (ev) => {
+   ev.preventDefault();
+   const priceVal = document.querySelector('.price').value;
+   const price = Number(priceVal);
+   const type = document.querySelector('.btn-radio:checked').value;
+   const year = document.querySelector('.year').value;
+   const result = document.querySelector('.result');
+
+   result.innerHTML = calc(price, type, year) + ' $';
 });
+// (цена * тип автомобиля) * (год / 100)
+// тип авто: Л = 1 Э = 0, 7 М = 1, 2 Г = 3

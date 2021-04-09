@@ -14,49 +14,92 @@ a {
    background: lightgray;
 }
 
-.form {
-   display: flex;
+.first-js {
+   .form {
+      display: flex;
 
-   .input-wrapper {
-      label {
-         display: block;
+      .input-wrapper {
+         label {
+            display: block;
 
-         &+label {
-            margin-top: 11px;
+            &+label {
+               margin-top: 11px;
+            }
+
+            input {
+               width: 222px;
+            }
          }
+      }
 
-         input {
-            width: 222px;
+      .btn-wrapper {
+         margin-left: 11px;
+         width: 222px;
+
+         .btn-save {
+            width: 100%;
+            height: 100%;
+            background: none;
          }
       }
    }
 
-   .btn-wrapper {
-      margin-left: 11px;
-      width: 222px;
+   .card {
+      display: none;
+      margin-top: 22px;
+      background: lightyellow;
+      width: 455px;
+      padding: 11px;
 
-      .btn-save {
-         width: 100%;
-         height: 100%;
-         background: none;
+      &.show {
+         display: block;
+      }
+
+      p {
+         span {
+            margin-left: 5px;
+         }
       }
    }
 }
 
-.card {
-   display: none;
-   margin-top: 22px;
-   background: lightyellow;
-   width: 455px;
-   padding: 11px;
+.clearance {
+   display: inline-block;
+   padding: 22px;
+   background-color: lightsalmon;
 
-   &.show {
+   .radio {
       display: block;
    }
 
-   p {
-      span {
-         margin-left: 5px;
-      }
+   .lbl-radio {
+      margin-left: 11px;
+   }
+
+   .year {
+      margin-top: 11px;
+      width: 55px;
+   }
+
+   .btn-submit {
+      margin-top: 22px;
+      display: block;
+      margin: 22px auto 0;
+   }
+
+   .price {
+      margin-top: 11px;
+      display: block;
+   }
+}
+
+.result-body {
+   margin-top: 22px;
+   background-color: lightsalmon;
+   width: 222px;
+
+   .result {
+      font-size: 22px;
+      font-weight: bold;
    }
 }
