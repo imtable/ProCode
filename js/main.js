@@ -1,8 +1,7 @@
 const form = document.forms.clearance;
 
 const calc = (price, type, year) => {
-   const result = (price * type) * (year / 100);
-   return result.toFixed(2);
+   return ((price * type) * (year / 100)).toFixed(2);
 }
 
 form.addEventListener('submit', (ev) => {
