@@ -7,8 +7,7 @@ const calc = (price, type, year) => {
 
 form.addEventListener('submit', (ev) => {
    ev.preventDefault();
-   const priceVal = document.querySelector('.price').value;
-   const price = Number(priceVal);
+   const price = Number(document.querySelector('.price').value);
    const type = document.querySelector('.btn-radio:checked').value;
    const year = document.querySelector('.year').value;
    const result = document.querySelector('.result');
