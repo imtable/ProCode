@@ -1,0 +1,58 @@
+* {
+   box-sizing: border-box;
+}
+
+a {
+   text-decoration: none;
+   color: black;
+}
+
+.wrapper {
+   margin: 0 auto;
+   padding: 15px;
+   width: 1500px;
+   background: lightgray;
+}
+
+.alarming {
+   background-color: lightsalmon;
+   display: inline-block;
+   padding: 22px;
+
+   .power-body {
+      .btn-power {
+         width: 55px;
+
+         &.on {
+            background-color: green;
+         }
+
+         &.off {
+            background-color: red;
+         }
+      }
+   }
+
+   .door-body {
+      margin-top: 11px;
+
+      .door {
+         width: 111px;
+
+         &.on {
+            background-color: green;
+         }
+
+         &.off {
+            background-color: red;
+         }
+      }
+   }
+
+   .status {
+      margin-top: 22px;
+      background-color: lightgreen;
+      display: inline-block;
+      padding: 11px;
+   }
+}

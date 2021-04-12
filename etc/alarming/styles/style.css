@@ -1,0 +1,58 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 15px;
+  width: 1500px;
+  background: lightgray;
+}
+
+.alarming {
+  background-color: lightsalmon;
+  display: inline-block;
+  padding: 22px;
+}
+
+.alarming .power-body .btn-power {
+  width: 55px;
+}
+
+.alarming .power-body .btn-power.on {
+  background-color: green;
+}
+
+.alarming .power-body .btn-power.off {
+  background-color: red;
+}
+
+.alarming .door-body {
+  margin-top: 11px;
+}
+
+.alarming .door-body .door {
+  width: 111px;
+}
+
+.alarming .door-body .door.on {
+  background-color: green;
+}
+
+.alarming .door-body .door.off {
+  background-color: red;
+}
+
+.alarming .status {
+  margin-top: 22px;
+  background-color: lightgreen;
+  display: inline-block;
+  padding: 11px;
+}
+/*# sourceMappingURL=style.css.map */
