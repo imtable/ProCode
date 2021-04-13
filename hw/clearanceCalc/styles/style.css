@@ -1,0 +1,103 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 15px;
+  width: 1500px;
+  background: lightgray;
+}
+
+.first-js .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.first-js .form .input-wrapper label {
+  display: block;
+}
+
+.first-js .form .input-wrapper label + label {
+  margin-top: 11px;
+}
+
+.first-js .form .input-wrapper label input {
+  width: 222px;
+}
+
+.first-js .form .btn-wrapper {
+  margin-left: 11px;
+  width: 222px;
+}
+
+.first-js .form .btn-wrapper .btn-save {
+  width: 100%;
+  height: 100%;
+  background: none;
+}
+
+.first-js .card {
+  display: none;
+  margin-top: 22px;
+  background: lightyellow;
+  width: 455px;
+  padding: 11px;
+}
+
+.first-js .card.show {
+  display: block;
+}
+
+.first-js .card p span {
+  margin-left: 5px;
+}
+
+.clearance {
+  display: inline-block;
+  padding: 22px;
+  background-color: lightsalmon;
+}
+
+.clearance .radio {
+  display: block;
+}
+
+.clearance .lbl-radio {
+  margin-left: 11px;
+}
+
+.clearance .year {
+  margin-top: 11px;
+  width: 55px;
+}
+
+.clearance .btn-submit {
+  margin-top: 22px;
+  display: block;
+  margin: 22px auto 0;
+}
+
+.clearance .price {
+  margin-top: 11px;
+  display: block;
+}
+
+.result-body {
+  margin-top: 22px;
+  background-color: lightsalmon;
+  width: 222px;
+}
+
+.result-body .result {
+  font-size: 22px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,17 +1,111 @@
-const form = document.forms.clearance;
+const classroom = [{
+      name: 'Иванна',
+      surname: 'Зимина',
+      hw: 5,
+   },
+   {
+      name: 'Александр',
+      surname: 'Гетьманский',
+      hw: 9,
+   },
+   {
+      name: 'Наталья',
+      surname: 'Горошко',
+      hw: 7,
+   },
+   {
+      name: 'Артем',
+      surname: 'Шевчук',
+      hw: 3,
+   }, {
+      name: 'Захар',
+      surname: 'Эт_я_кста',
+      hw: 3,
+   }, {
+      name: 'Денис',
+      surname: 'Рудик',
+      hw: 9,
+   }, {
+      name: 'Владислав',
+      surname: 'Фамилия',
+      hw: 6,
+   }, {
+      name: 'Андрей',
+      surname: 'Тимошенко',
+      hw: 9,
+   }, {
+      name: 'Алекс',
+      surname: 'Грико',
+      hw: 2,
+   }, {
+      name: 'Инна',
+      surname: 'Олещенко',
+      hw: 8,
+   }, {
+      name: 'Николай',
+      surname: 'Зайченко',
+      hw: 4,
+   }, {
+      name: 'Андрей',
+      surname: 'Стегний',
+      hw: 5,
+   }, {
+      name: 'Вова',
+      surname: 'Фамилия',
+      hw: 6,
+   }, {
+      name: 'Егор',
+      surname: 'Фамилия',
+      hw: 7,
+   }
+];
+const btnList = document.querySelector('.btn-list');
+const btnFilter = document.querySelector('.btn-filter');
+const listDiv = document.querySelector('.classroom_list');
+const filteredDiv = document.querySelector('.classroom_filtered');
 
-const calc = (price, type, year) => {
-   return ((price * type) * (year / 100)).toFixed(2);
+const arrShow = (arr) => {
+   for (let i of arr) {
+      let name = i.name;
+      let surname = i.surname;
+      let hw = i.hw;
+      // console.log(name);
+      const html = `
+         <div class="person">
+            <p class="name">Имя: ${name}</p>
+            <p class="surname">Фамилия: ${surname}</p>
+         </div>
+      `
+      listDiv.insertAdjacentHTML('beforeend', html);
+   }
 }
 
-form.addEventListener('submit', (ev) => {
-   ev.preventDefault();
-   const price = Number(document.querySelector('.price').value);
-   const type = document.querySelector('.btn-radio:checked').value;
-   const year = document.querySelector('.year').value;
-   const result = document.querySelector('.result');
-
-   result.innerHTML = calc(price, type, year) + ' $';
+const filterClass = classroom.filter((person) => {
+   return person.hw >= 7;
 });
-// (цена * тип автомобиля) * (год / 100)
-// тип авто: Л = 1 Э = 0, 7 М = 1, 2 Г = 3
+
+const arrShowFiltered = (arr) => {
+   for (let i of arr) {
+      let name = i.name;
+      let surname = i.surname;
+      let hw = i.hw;
+      const html = `
+         <div class="person">
+            <p class="name">Имя: ${name}</p>
+            <p class="surname">Фамилия: ${surname}</p>
+            <p class="hw">Домашек: ${hw}</p>
+         </div>
+      `
+      filteredDiv.insertAdjacentHTML('beforeend', html);
+   }
+}
+
+btnList.addEventListener('click', () => {
+   listDiv.classList.toggle('active');
+   arrShow(classroom);
+});
+
+btnFilter.addEventListener('click', () => {
+   filteredDiv.classList.toggle('active');
+   arrShowFiltered(filterClass);
+});
