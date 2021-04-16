@@ -66,10 +66,9 @@ const filteredDiv = document.querySelector('.classroom_filtered');
 
 const arrShow = (arr) => {
    for (let i of arr) {
-      let name = i.name;
-      let surname = i.surname;
-      let hw = i.hw;
-      // console.log(name);
+      const name = i.name;
+      const surname = i.surname;
+      const hw = i.hw;
       const html = `
          <div class="person">
             <p class="name">Имя: ${name}</p>
@@ -80,15 +79,14 @@ const arrShow = (arr) => {
    }
 }
 
-const filterClass = classroom.filter((person) => {
-   return person.hw >= 7;
-});
-
-const arrShowFiltered = (arr) => {
-   for (let i of arr) {
-      let name = i.name;
-      let surname = i.surname;
-      let hw = i.hw;
+const arrShowFiltered = (arg) => {
+   const filterArr = arg.filter((person) => {
+      return person.hw >= 7;
+   });
+   for (let i of filterArr) {
+      const name = i.name;
+      const surname = i.surname;
+      const hw = i.hw;
       const html = `
          <div class="person">
             <p class="name">Имя: ${name}</p>
@@ -99,13 +97,14 @@ const arrShowFiltered = (arr) => {
       filteredDiv.insertAdjacentHTML('beforeend', html);
    }
 }
-
 btnList.addEventListener('click', () => {
+   listDiv.innerHTML = '';
    listDiv.classList.toggle('active');
    arrShow(classroom);
 });
 
 btnFilter.addEventListener('click', () => {
+   filteredDiv.innerHTML = '';
    filteredDiv.classList.toggle('active');
-   arrShowFiltered(filterClass);
+   arrShowFiltered(classroom);
 });
