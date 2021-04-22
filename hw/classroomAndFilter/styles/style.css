@@ -1,0 +1,53 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 15px;
+  width: 1500px;
+  background: lightgray;
+}
+
+.classroom {
+  background-color: lightsalmon;
+  padding: 22px;
+  display: inline-block;
+}
+
+.classroom .person {
+  background-color: lightsteelblue;
+  padding: 2px;
+  margin-top: 11px;
+}
+
+.classroom .classroom_list-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.classroom .classroom_list {
+  display: none;
+  margin-right: 22px;
+}
+
+.classroom .classroom_filtered {
+  display: none;
+}
+
+.classroom .active {
+  display: block;
+}
+
+.classroom .btn {
+  font-size: 18px;
+  padding: 11px 22px;
+}
+/*# sourceMappingURL=style.css.map */

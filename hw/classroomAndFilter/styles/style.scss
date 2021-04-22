@@ -1,0 +1,50 @@
+* {
+   box-sizing: border-box;
+}
+
+a {
+   text-decoration: none;
+   color: black;
+}
+
+.wrapper {
+   margin: 0 auto;
+   padding: 15px;
+   width: 1500px;
+   background: lightgray;
+}
+
+.classroom {
+   background-color: lightsalmon;
+   padding: 22px;
+   display: inline-block;
+
+
+   .person {
+      background-color: lightsteelblue;
+      padding: 2px;
+      margin-top: 11px;
+   }
+
+   .classroom_list-wrapper {
+      display: flex;
+   }
+
+   .classroom_list {
+      display: none;
+      margin-right: 22px;
+   }
+
+   .classroom_filtered {
+      display: none;
+   }
+
+   .active {
+      display: block;
+   }
+
+   .btn {
+      font-size: 18px;
+      padding: 11px 22px;
+   }
+}

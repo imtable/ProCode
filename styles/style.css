@@ -15,39 +15,22 @@ a {
   background: lightgray;
 }
 
-.classroom {
+.calculator {
   background-color: lightsalmon;
-  padding: 22px;
+  padding: 11px;
   display: inline-block;
 }
 
-.classroom .person {
-  background-color: lightsteelblue;
-  padding: 2px;
-  margin-top: 11px;
+.calculator .btn-wrapper {
+  margin-top: 22px;
 }
 
-.classroom .classroom_list-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.calculator .result-wrapper {
+  margin-top: 33px;
 }
 
-.classroom .classroom_list {
-  display: none;
-  margin-right: 22px;
-}
-
-.classroom .classroom_filtered {
-  display: none;
-}
-
-.classroom .active {
-  display: block;
-}
-
-.classroom .btn {
-  font-size: 18px;
-  padding: 11px 22px;
+.calculator .result-wrapper .result {
+  font-size: 22px;
+  color: mintcream;
 }
 /*# sourceMappingURL=style.css.map */

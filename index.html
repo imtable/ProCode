@@ -4,25 +4,29 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>classroomAndFilter</title>
+	<title>calc</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
 	<link rel="stylesheet" href="styles/style.css" />
 </head>
 
 <body>
 	<div class="wrapper">
-		<div class="classroom">
+		<form class="calculator" id="calculator">
+			<div class="num-wrapper">
+				<input type="text" class="num-1">
+				<input type="text" class="num-2">
+			</div>
 			<div class="btn-wrapper">
-				<button class="btn btn-list">show class</button>
-				<button class="btn btn-filter">most productive</button>
+				<button class="btn btn-multiply">multiply</button>
+				<button class="btn btn-divide">divide</button>
+				<button class="btn btn-pow">pow</button>
+				<button class="btn btn-sqrt">sqrt</button>
 			</div>
-			<div class="classroom_list-wrapper">
-				<div class="classroom_list"></div>
-				<div class="classroom_filtered"></div>
+			<div class="result-wrapper">result is: <span class="result"></span>
 			</div>
-		</div>
+		</form>
 	</div>
-	<script src="./js/main.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

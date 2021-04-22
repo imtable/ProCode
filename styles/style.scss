@@ -14,37 +14,21 @@ a {
    background: lightgray;
 }
 
-.classroom {
+.calculator {
    background-color: lightsalmon;
-   padding: 22px;
+   padding: 11px;
    display: inline-block;
 
-
-   .person {
-      background-color: lightsteelblue;
-      padding: 2px;
-      margin-top: 11px;
+   .btn-wrapper {
+      margin-top: 22px;
    }
 
-   .classroom_list-wrapper {
-      display: flex;
-   }
+   .result-wrapper {
+      margin-top: 33px;
 
-   .classroom_list {
-      display: none;
-      margin-right: 22px;
-   }
-
-   .classroom_filtered {
-      display: none;
-   }
-
-   .active {
-      display: block;
-   }
-
-   .btn {
-      font-size: 18px;
-      padding: 11px 22px;
+      .result {
+         font-size: 22px;
+         color: mintcream;
+      }
    }
 }
