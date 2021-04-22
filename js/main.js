@@ -1,4 +1,3 @@
-const form = document.forms.clearance;
 const btnMultiply = document.querySelector('.btn-multiply');
 const btnDivide = document.querySelector('.btn-divide');
 const btnPow = document.querySelector('.btn-pow');
