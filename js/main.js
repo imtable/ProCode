@@ -7,14 +7,12 @@ const result = document.querySelector('.result');
 const inputOne = document.querySelector('.num-1');
 const inputTwo = document.querySelector('.num-2');
 const inputToFixed = document.querySelector('.to-fixed');
-let res;
 
 const multiply = (arg, arg2) => {
    return Number(arg.value) * Number(arg2.value);
 }
 const divide = (arg, arg2) => {
-   res = Number(arg.value) / Number(arg2.value);
-   return res;
+   return Number(arg.value) / Number(arg2.value);;
 }
 const pow = (arg, arg2) => {
    return Math.pow(Number(arg.value), Number(arg2.value));
