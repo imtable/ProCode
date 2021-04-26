@@ -4,28 +4,34 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>calc</title>
+	<title>spider</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
 	<link rel="stylesheet" href="styles/style.css" />
 </head>
 
 <body>
 	<div class="wrapper">
-		<form class="calculator" id="calculator">
-			<div class="num-wrapper">
-				<input type="text" class="num-1" placeholder="first number">
-				<input type="text" class="num-2" placeholder="second number or stepen'">
-				<input type="text" class="to-fixed" placeholder="fixed value">
+		<div class="spider">
+			<div class="grid-control">
+				<form class="grid-control_form" name="gridForm">
+					<input type="number" class="grid-control_rows" name="paramRows" placeholder="rows">
+					<input type="number" class="grid-control_cols" name="paramCols" placeholder="cols">
+					<button class="grid-control_submit" type="submit" name="setParam">set the grid</button>
+				</form>
 			</div>
-			<div class="btn-wrapper">
-				<button class="btn btn-multiply">multiply</button>
-				<button class="btn btn-divide">divide</button>
-				<button class="btn btn-pow">pow</button>
-				<button class="btn btn-sqrt">sqrt</button>
+			<div class="spider_bottom-wrapper">
+				<div class="char-control">
+					<div class="up">up</div>
+					<div class="left">left</div>
+					<div class="right">right</div>
+					<div class="down">down</div>
+				</div>
+				<div class="grid">
+					<img src="./images/spider.png" alt="spider" class="spider-img">
+					<div class="grid-wrapper"></div>
+				</div>
 			</div>
-			<div class="result-wrapper">result is: <span class="result"></span>
-			</div>
-		</form>
+		</div>
 	</div>
 	<script src="js/main.js"></script>
 </body>

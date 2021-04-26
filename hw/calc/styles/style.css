@@ -1,0 +1,36 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 15px;
+  width: 1500px;
+  background: lightgray;
+}
+
+.calculator {
+  background-color: lightsalmon;
+  padding: 11px;
+  display: inline-block;
+}
+
+.calculator .btn-wrapper {
+  margin-top: 22px;
+}
+
+.calculator .result-wrapper {
+  margin-top: 33px;
+}
+
+.calculator .result-wrapper .result {
+  font-size: 22px;
+  color: mintcream;
+}
+/*# sourceMappingURL=style.css.map */
