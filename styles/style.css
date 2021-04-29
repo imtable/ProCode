@@ -15,59 +15,18 @@ a {
   background: lightgray;
 }
 
-.spider .spider_bottom-wrapper {
-  margin-top: 33px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.spider .spider_bottom-wrapper .char-control {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-}
-
-.spider .spider_bottom-wrapper .char-control div {
-  padding: 5px;
-  margin: 11px;
-  background-color: lightsteelblue;
-  text-align: center;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-.spider .spider_bottom-wrapper .char-control .left,
-.spider .spider_bottom-wrapper .char-control .right {
+.lamp {
+  background-color: crimson;
+  padding: 22px;
   display: inline-block;
 }
 
-.spider .spider_bottom-wrapper .char-control .pressed {
-  background-color: yellow;
+.lamp .temperature {
+  margin-top: 22px;
 }
 
-.spider .spider_bottom-wrapper .grid {
-  margin-left: 22px;
-  position: relative;
-}
-
-.spider .spider_bottom-wrapper .grid .spider-img {
-  position: absolute;
-  height: 32px;
-  width: 32px;
-  top: 10px;
-  left: 10px;
-}
-
-.spider .spider_bottom-wrapper .grid .grid-wrapper {
-  display: -ms-grid;
-  display: grid;
-}
-
-.spider .spider_bottom-wrapper .grid .grid-wrapper .grid_cell {
-  width: 55px;
-  height: 55px;
-  background-color: moccasin;
-  border: 1px solid black;
+.lamp .result {
+  font-size: 22px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */

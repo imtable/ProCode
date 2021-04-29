@@ -14,55 +14,17 @@ a {
    background: lightgray;
 }
 
-.spider {
-   .spider_bottom-wrapper {
-      margin-top: 33px;
-      display: flex;
+.lamp {
+   background-color: crimson;
+   padding: 22px;
+   display: inline-block;
 
-      .char-control {
-         flex: 0 0 auto;
+   .temperature {
+      margin-top: 22px;
+   }
 
-         div {
-            padding: 5px;
-            margin: 11px;
-            background-color: lightsteelblue;
-            text-align: center;
-            font-size: 22px;
-            cursor: pointer;
-         }
-
-         .left,
-         .right {
-            display: inline-block;
-         }
-
-         .pressed {
-            background-color: yellow;
-         }
-      }
-
-      .grid {
-         margin-left: 22px;
-         position: relative;
-
-         .spider-img {
-            position: absolute;
-            height: 32px;
-            width: 32px;
-            top: 10px;
-            left: 10px;
-         }
-
-         .grid-wrapper {
-            display: grid;
-
-            .grid_cell {
-               width: 55px;
-               height: 55px;
-               background-color: moccasin;
-               border: 1px solid black;
-            }
-         }
-      }
+   .result {
+      font-size: 22px;
+      font-weight: bold;
    }
 }

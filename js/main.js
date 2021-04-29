@@ -1,125 +1,121 @@
-const gridForm = document.forms.gridForm;
-const gridBlock = document.querySelector('.grid-wrapper');
-const up = document.querySelector('.up');
-const left = document.querySelector('.left');
-const right = document.querySelector('.right');
-const down = document.querySelector('.down');
-const spider = document.querySelector('.spider-img');
-let spiderX = 10;
-let spiderY = 10;
+// __________model______________
+const param = {
+   br: 0,
+   temp: 1000
+};
 
+// ________controller___________
 const getParam = () => {
-   const data = new FormData(gridForm);
-   const paramRows = Number(data.get('paramRows').trim());
-   const paramCols = Number(data.get('paramCols').trim());
-   return [paramRows, paramCols];
-}
-const setParam = () => {
-   const params = getParam();
-   const paramsCount = params[0] * params[1];
-   const gridCell = `<div class="grid_cell"></div>`;
-   let content = '';
-
-   gridBlock.style.gridTemplateRows = `repeat(${params[0]}, 1fr)`;
-   gridBlock.style.gridTemplateColumns = `repeat(${params[1]}, 1fr)`;
-
-   for (let i = paramsCount; i > 0; i--) {
-      content += gridCell;
-   }
-   gridBlock.innerHTML = content;
+   return {
+      br: param.br,
+      temp: param.temp
+   };
 }
 
-gridForm.addEventListener('submit', (ev) => {
-   ev.preventDefault();
-   gridBlock.innerHTML = '';
-   setParam();
+const setParam = (br, temp) => {
+   param.br = br;
+   param.temp = temp;
+}
+
+const plusBr = () => {
+   const curParam = getParam();
+   if (curParam.br >= 100) {
+      return;
+   }
+   const newBr = curParam.br + 1;
+
+   setParam(newBr, curParam.temp);
+   renderBr();
+}
+
+const minusBr = () => {
+   const curParam = getParam();
+
+   if (curParam.br <= 0) {
+      return;
+   }
+   const newBr = curParam.br - 1;
+
+   setParam(newBr, curParam.temp);
+   renderBr();
+}
+
+const plusTemp = () => {
+   const curParam = getParam();
+   if (curParam.temp >= 5000) {
+      return;
+   }
+   const newTemp = curParam.temp + 500;
+
+   setParam(curParam.br, newTemp);
+   renderTemp();
+}
+
+const minusTemp = () => {
+   const curParam = getParam();
+
+   if (curParam.temp <= 1000) {
+      return;
+   }
+   const newTemp = curParam.temp - 500;
+
+   setParam(curParam.br, newTemp);
+   renderTemp();
+}
+
+// ________view___________
+const changeBg = () => {
+   const lamp = document.querySelector('.lamp');
+   const curParam = getParam().temp;
+   if (curParam === 1000) {
+      lamp.style.backgroundColor = 'crimson';
+   } else if (curParam === 1500) {
+      lamp.style.backgroundColor = 'red';
+   } else if (curParam === 2000) {
+      lamp.style.backgroundColor = 'orangered';
+   } else if (curParam === 2500) {
+      lamp.style.backgroundColor = 'darkorange';
+   } else if (curParam === 3000) {
+      lamp.style.backgroundColor = 'orange';
+   } else if (curParam === 3500) {
+      lamp.style.backgroundColor = 'sandybrown';
+   } else if (curParam === 4000) {
+      lamp.style.backgroundColor = 'peachpuff';
+   } else if (curParam === 4500) {
+      lamp.style.backgroundColor = 'yellow';
+   } else if (curParam === 5000) {
+      lamp.style.backgroundColor = 'palegoldenrod';
+   }
+}
+const renderBr = () => {
+   const curParam = getParam();
+   const result = document.querySelector('.br-result');
+
+   result.innerHTML = curParam.br;
+}
+const renderTemp = () => {
+   const curParam = getParam();
+   const result = document.querySelector('.temp-result');
+
+   result.innerHTML = curParam.temp;
+   changeBg();
+}
+
+const btnBrPlus = document.querySelector('.br-plus');
+const btnBrMinus = document.querySelector('.br-minus');
+const btnTempPlus = document.querySelector('.temp-plus');
+const btnTempMinus = document.querySelector('.temp-minus');
+
+btnBrPlus.addEventListener('click', (ev) => {
+   plusBr();
+});
+btnBrMinus.addEventListener('click', (ev) => {
+   minusBr();
 });
 
-up.addEventListener('mousedown', (ev) => {
-   up.classList.add('pressed');
-   spiderY -= 55;
-   spider.style.top = `${spiderY}px`;
+btnTempPlus.addEventListener('click', (ev) => {
+   plusTemp();
 });
-up.addEventListener('mouseup', (ev) => {
-   up.classList.remove('pressed');
-});
-
-left.addEventListener('mousedown', (ev) => {
-   left.classList.add('pressed');
-   spiderX -= 55;
-   spider.style.left = `${spiderX}px`;
-});
-left.addEventListener('mouseup', (ev) => {
-   left.classList.remove('pressed');
-});
-
-right.addEventListener('mousedown', (ev) => {
-   right.classList.add('pressed');
-   spiderX += 55;
-   spider.style.left = `${spiderX}px`;
-});
-right.addEventListener('mouseup', (ev) => {
-   right.classList.remove('pressed');
-});
-
-down.addEventListener('mousedown', (ev) => {
-   down.classList.add('pressed');
-   spiderY += 55;
-   spider.style.top = `${spiderY}px`;
-});
-down.addEventListener('mouseup', (ev) => {
-   down.classList.remove('pressed');
-});
-
-//  keyboard arrows
-
-document.addEventListener('keydown', (ev) => {
-   if (ev.code === 'ArrowUp') {
-      up.classList.add('pressed');
-      spiderY -= 55;
-      spider.style.top = `${spiderY}px`;
-   }
-});
-document.addEventListener('keyup', (ev) => {
-   if (ev.code === 'ArrowUp') {
-      up.classList.remove('pressed');
-   }
-});
-document.addEventListener('keydown', (ev) => {
-   if (ev.code === 'ArrowLeft') {
-      left.classList.add('pressed');
-      spiderX -= 55;
-      spider.style.left = `${spiderX}px`;
-   }
-});
-document.addEventListener('keyup', (ev) => {
-   if (ev.code === 'ArrowLeft') {
-      left.classList.remove('pressed');
-   }
-});
-
-document.addEventListener('keydown', (ev) => {
-   if (ev.code === 'ArrowRight') {
-      right.classList.add('pressed');
-      spiderX += 55;
-      spider.style.left = `${spiderX}px`;
-   }
-});
-document.addEventListener('keyup', (ev) => {
-   if (ev.code === 'ArrowRight') {
-      right.classList.remove('pressed');
-   }
-});
-
-document.addEventListener('keydown', (ev) => {
-   if (ev.code === 'ArrowDown') {
-      down.classList.add('pressed');
-      spiderY += 55;
-      spider.style.top = `${spiderY}px`;
-   }
-});
-document.addEventListener('keyup', (ev) => {
-   if (ev.code === 'ArrowDown') {
-      down.classList.remove('pressed');
-   }
+btnTempMinus.addEventListener('click', (ev) => {
+   minusTemp();
 });
