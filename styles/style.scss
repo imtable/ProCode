@@ -1,0 +1,38 @@
+* {
+   box-sizing: border-box;
+}
+
+a {
+   text-decoration: none;
+   color: black;
+}
+
+.wrapper {
+   margin: 0 auto;
+   padding: 15px;
+   width: 1200px;
+   background: lightgray;
+}
+
+.dishes {
+   background-color: lightsalmon;
+   padding: 22px;
+   display: inline-block;
+
+   .dishes-list {
+      .item {
+         &.hide {
+            display: none;
+         }
+
+         p {
+            font-weight: bold;
+         }
+      }
+   }
+
+
+   .form {
+      margin-top: 33px;
+   }
+}
