@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>lamp</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+	<link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<form class="lamp" name="lamp">
+			<div class="brightness">
+				<button class="br-minus" type="button" name="br-minus">-</button>
+				<button class="br-plus" type="button" name="br-plus">+</button>
+				<span>brightness:</span> <span class="br-result result">0</span><span class='result'>%</span>
+			</div>
+			<div class="temperature">
+				<button class="temp-minus" type="button" name="temp-minus">-</button>
+				<button class="temp-plus" type="button" name="temp-plus">+</button>
+				<span>temperature:</span> <span class="temp-result result">1000</span><span class='result'>k</span>
+			</div>
+		</form>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
