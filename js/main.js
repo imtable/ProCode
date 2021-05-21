@@ -1,60 +1,18 @@
-const test = () => {
-   const ingridients = [{
-         id: 'e88',
-         name: 'картошка',
-         alergen: false,
-         kkal: 100
-      },
-      {
-         id: '08a',
-         name: 'лук',
-         alergen: true,
-         kkal: 200
-      },
-      {
-         id: 'a0b',
-         name: 'шкварки',
-         alergen: false,
-         kkal: 300
-      },
-      {
-         id: '0dd',
-         name: 'бульйон',
-         alergen: false,
-         kkal: 400
-      },
-      {
-         id: 'd12',
-         name: 'морковка',
-         alergen: false,
-         kkal: 500
-      },
-      {
-         id: '8a1',
-         name: 'оливковая олия',
-         alergen: false,
-         kkal: 600
-      }
-   ];
+const moment = require('moment');
 
-   const result = {
-      status: 'ok',
-      ingridients, // ingridients: ingridients,
-      payload: {
-         error: 'test_fail',
-         message: 'тест не пройден'
-      }
-   }
+const birthday = '01.01.1995';
 
-   return result;
+const calcAge = (age) => {
+   const format = ["DD.MM.YYYY"];
+   const formatedAge = moment(age, format);
+
+   const years = moment().diff(formatedAge, "years");
+   const months = moment().diff(formatedAge.add(years, 'years'), 'months');
+   const days = moment().diff(formatedAge.add(years, months, 'years', 'months'), 'days');
+
+   // const fullAge = (years + ' years, ' + months + ' months, ' + days + ' days, ');
+   const fullAge = `My age is: ${years} years, ${months} months, ${days} days`;
+   return fullAge;
 }
 
-if ( test().status === 'ok') {
-   const {ingridients} = test();
-   const filterIngr = ingridients.filter( (el) => {
-      return el.alergen === false;
-   });
-   
-   const reducer = (accumulator, currentValue) => accumulator + currentValue.kkal;
-   const kkal = filterIngr.reduce(reducer, 0);
-}
+console.log(calcAge(birthday));
