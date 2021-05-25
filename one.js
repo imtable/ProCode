@@ -1,10 +1,3 @@
-const setBirthday = (val) => {
-   birthday = val;
-   module.exports = {
-      birthday,
-   }
-};
+const compare = require('./compare.js');
 
-module.exports = {
-   setBirthday,
-}
+compare.setBirthday(1999);
