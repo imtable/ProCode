@@ -1,15 +1,14 @@
 {
-  "name": "my-pack",
+  "name": "imtable-proj",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node ./app.js"
   },
-  "author": "",
+  "author": "imtable",
   "license": "ISC",
   "dependencies": {
-    "moment": "^2.29.1"
+    "axios": "^0.21.1"
   }
 }
