@@ -19,4 +19,6 @@ const bar = async () => {
    const writeForecast = await fs.promises.appendFile('./forecast.txt', `${forecast} \n`);
 }
 
-foo();
+setInterval(() => {
+   foo();
+}, 9000);
