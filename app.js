@@ -4,7 +4,6 @@ const fs = require('fs');
 http.createServer((req, res) => {
    console.log('request from browser');
    const path = './file.html';
-   const stat = fs.statSync(path);
    
    const readStream = fs.createReadStream(path);
    readStream.pipe(res);
