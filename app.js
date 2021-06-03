@@ -1,24 +1,30 @@
-const axios = require('axios');
+const http = require('http');
 const fs = require('fs');
 
-// const url = 'https://api.openweathermap.org/data/2.5/forecast/daily?q=Kyiv&cnt=2&appid=c822ed03c42a3aedc3737fd87e6e881f'; запрос на завтра, но недоступен (видимо, из-за фри-аккаунта)
-const url = 'https://api.openweathermap.org/data/2.5/forecast?id=703448&cnt=40&appid=c822ed03c42a3aedc3737fd87e6e881f&units=metric';
+http.createServer((req, res) => {
+   console.log('request from browser');
+   const path = './file.html';
+   const stat = fs.statSync(path);
+   
+   const readStream = fs.createReadStream(path);
+   readStream.pipe(res);
+}).listen(8000);
 
-let forecast = '123';
+// lvl3
+// const axios = require('axios');
+// const url = 'https://unsplash.com/photos/AaEQmoufHLk/download?force=true';
+// let webFile = '';
 
-const foo = async () => {
-   axios.get(url).then((response) => {
-      const temp = response.data.list[9].main.temp;
-      const date = response.data.list[9].dt_txt;
-      forecast = `temperature forecast: ${temp} Celsius, date: ${date}`; 
-      console.log(forecast);
-      bar();
-   });
-};
-const bar = async () => {
-   const writeForecast = await fs.promises.appendFile('./forecast.txt', `${forecast} \n`);
-}
+// const getFile = () => {
+//    axios.get(url).then((response) => {
+//       webFile = response.data;
+//       console.log(webFile);
+//    });
+//    return webFile;
+// };
+// getFile();
+// lvl3
 
-setInterval(() => {
-   foo();
-}, 9000);
+// Лвл 1. Поднять сервать на модуле хттп и попробовать получить на него запрос с браузера
+// Лвл 2. Отправить в ответ файл на запрос
+// Лвл 3. В ответ на запрос, запросить файл аяксом откудато с интернета(неважно какой) и отдать его в ответ на запрос.
