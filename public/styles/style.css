@@ -1,0 +1,28 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 15px;
+  width: 1200px;
+  background: lightgray;
+}
+
+h1 {
+  color: tan;
+  font-size: 55px;
+  width: 333px;
+  margin: 0 auto;
+}
+
+.img-wrapper {
+  width: 800px;
+  margin: 22px auto;
+}
