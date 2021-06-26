@@ -1,8 +1,18 @@
-const formEl = document.forms.formFileUpload;
+console.log('start');
 
-formEl.addEventListener('submit', async (ev) => {
-   ev.preventDefault();
-   const formData = new FormData(ev.target);
-   const { data } = await axios.post('/multer', formData);
+const getList = async () => {
+   const { data } = await axios.get('/task/list');
    console.log(data);
-});
+
+   const articleList = data.result.list;
+
+   html = '';
+   for (item of articleList ) {
+      html = `${html}<a href='/task/${item.id}' article-id=${item.id}>${item.title}</a>`;
+   }
+
+   const wrapperEl = document.querySelector('.wrapper');
+   wrapperEl.innerHTML = html;
+};
+
+getList();
