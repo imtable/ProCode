@@ -1,18 +1,20 @@
 console.log('start');
 
-const getList = async () => {
-   const { data } = await axios.get('/task/list');
-   console.log(data);
+const formEl = document.forms.taskForm;
 
-   const articleList = data.result.list;
+formEl.addEventListener('submit', async (ev) => {
+   ev.preventDefault();
+   const formData = new FormData(ev.target);
+   const id = formData.get('inpId');
 
-   html = '';
-   for (item of articleList ) {
-      html = `${html}<a href='/task/${item.id}' article-id=${item.id}>${item.title}</a>`;
-   }
+   const { data } = await axios.post('/task', formData);
+   console.log(data[0].name);
 
-   const wrapperEl = document.querySelector('.wrapper');
-   wrapperEl.innerHTML = html;
-};
+   const planets = data.map(item => {
+      return item.name;
+   });
+   const contentEl = document.querySelector('.content');
+   contentEl.innerHTML = planets;
+});
 
-getList();
+console.log('end');
