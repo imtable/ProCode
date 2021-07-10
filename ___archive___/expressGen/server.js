@@ -31,7 +31,7 @@ server.use(function(req, res, next) {
 server.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
-  // res.locals.error = req.server.get('env') === 'development' ? err : {};
+  res.locals.error = req.server.get('env') === 'development' ? err : {};
 
   // render the error page
   res.status(err.status || 500);
@@ -39,3 +39,7 @@ server.use(function(err, req, res, next) {
 });
 
 module.exports = server;
+
+// лвл 1. разворачиваем экспресс через экспресс генератор
+// лвл 2 правим синтаксическиесемантические "косяки" типо варовконстов и именами файлов и пере6меннных
+// лвл 3 реализуем домашку с планетами на экспресс генераторе
