@@ -81,14 +81,39 @@ const render = () => {
 }
 
 // magic
-const btnBuy = document.querySelectorAll('.btnBuy');
+render();
 
-btnBuy.forEach((el) => {
-   el.addEventListener('click', (ev) => {
-      const { id } = ev.target.dataset;
-      addProduct(id);
-      render();
-   });
+// const btnDel = document.querySelectorAll('.btnDel');
+// const btnAdd = document.querySelectorAll('.btnAdd');
+// btnAdd.forEach((el) => {
+//    el.addEventListener('click', (ev) => {
+//       const { id } = ev.target.dataset;
+//       addProduct(id);
+//       render();
+//    });
+// });
+// btnDel.forEach((el) => {
+//    el.addEventListener('click', (ev) => {
+//       const { id } = ev.target.dataset;
+//       delProduct(id);
+//       render();
+//    });
+// });
+
+btnNewOrder.addEventListener('click', (ev) => {
+   const orderEl = document.querySelector('.cart_order');
+   orderEl.classList.add('show');
+});
+
+cartFormEl.addEventListener('submit', async (ev) => {
+   ev.preventDefault();
+   const formData = new FormData(ev.target, cartFormEl);
+
+   const { data } = await axios.post('/taskCart', formData);
+   console.log(data);
+
+   const orderEl = document.querySelector('.cart_order');
+   orderEl.innerHTML = 'succes';
 });
 
 // лвл 1
