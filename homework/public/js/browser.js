@@ -9,6 +9,15 @@ class Product {
    };
 };
 
+const createProduct = (itemName, itemId) => {
+   let product = {
+      name: '0',
+      id: '0'
+   }
+   product.name = itemName;
+   product.id = itemId;
+}
+
 const products = [];
 const setProducts = () => {
    const productsNode = document.querySelectorAll('.products .item');
@@ -16,7 +25,7 @@ const setProducts = () => {
       const itemName = item.children[0].innerHTML;
       const itemId = item.dataset.id;
 
-      let product = new Product(itemName, itemId);
+      let product = createProduct(itemName, itemId);
       products.push(product);
    };
    return products;
@@ -97,34 +106,36 @@ const buy = () => {
    btnBuy.forEach((el) => {
       el.addEventListener('click', (ev) => {
          const { id } = ev.target.dataset;
+         console.log(ev);
          addProduct(id);
-         
          render();
       });
    });
 }
 
-// const countIncr = () => {
-//    document.addEventListener('click', (ev) => {
-//       if (ev.target && ev.target.classList.contains("btnAdd")) {
-//          const { id } = ev.target.dataset;
-//          addProduct(id);
-//          render();
-//        }
-//    });
-// }
-// const countDecr = () => {
-//    document.addEventListener('click', (ev) => {
-//       if (ev.target && ev.target.classList.contains("btnAdd")) {
-//          const { id } = ev.target.dataset;
-//          delProduct(id);
-//          render();
-//        }
-//    });
-// }
+const countIncr = () => {
+   document.addEventListener('click', (ev) => {
+      if (ev.target && ev.target.classList.contains("btnAdd")) {
+         const { id } = ev.target.dataset;
+         addProduct(id);
+         render();
+       }
+   });
+} 
+
+const countDecr = () => {
+   document.addEventListener('click', (ev) => {
+      if (ev.target && ev.target.classList.contains("btnDel")) {
+         const { id } = ev.target.dataset;
+         delProduct(id);
+         render();
+      }
+   });
+}
 
 // view
-const subRender = (listEl) => {
+const render = () => {
+   const listEl = document.querySelector('.cart .cart-inner .list');
    const cart = getCart();
    let html = '';
    for (item of cart) {
@@ -141,43 +152,16 @@ const subRender = (listEl) => {
    listEl.innerHTML = html;
 }
 
-const render = function() {
-   let listEl = document.querySelector('.cart .cart-inner .list');
-   if (listEl) {
-      subRender(listEl);
-      return;
-   }
-
-   const cartInnerEl = document.querySelector('.cart .cart-inner');
-   listEl = document.createElement('div');
-   listEl.classList.add('list');
-   cartInnerEl.appendChild(listEl);
-   const btnAdd = document.querySelectorAll('.cart .cart-inner .list .btnAdd');
-   const btnDel = document.querySelectorAll('.btnDel');
-
-   subRender(listEl);
- };
-
 // magic
 const init = () => {
    setProducts();
    buy();
    orderManager();
-
-   document.addEventListener('click', (ev) => {
-      if (ev.target && ev.target.classList.contains("btnAdd")) {
-         const { id } = ev.target.dataset;
-         addProduct(id);
-         render();
-       }
-   });
-   document.addEventListener('click', (ev) => {
-   if (ev.target && ev.target.classList.contains("btnDel")) {
-      const { id } = ev.target.dataset;
-      delProduct(id);
-      render();
-      }
-   });
+   countIncr();
+   countDecr();
+   localStorage.setItem('fruit', 'banana');
+   const fruit = localStorage.getItem('fruit');
+   console.log(fruit)
 }
 init();
 
@@ -193,3 +177,38 @@ init();
 // Отправляем заполненную и иинформацию о заказе на сервер.
 //  Просто выводим инфу в консоль (или бд для тех кто умеет). 
 //  Роут на серваке должен иметь валидацию
+
+// OVERCODE:
+// const subRender = (listEl) => {
+//    const cart = getCart();
+//    let html = '';
+//    for (item of cart) {
+//       html += `
+//       <div class="item" data-id='${item.id}'>
+//          <h3 class="item_title">${item.name}</h3>
+//          <span>count: ${item.count}</span>
+//          <button class="btnDel" data-id='${item.id}' type="button">–</button>
+//          <button class="btnAdd" id='123' data-id='${item.id}' type="button">+</button>
+//          <input class="toServer" type="text" name='${item.name}' data-id='${item.id}' value='${item.count}'>
+//       </div>
+//       `;
+//    }
+//    listEl.innerHTML = html;
+// }
+
+// const render = function() {
+//    let listEl = document.querySelector('.cart .cart-inner .list');
+//    if (listEl) {
+//       subRender(listEl);
+//       return;
+//    }
+
+//    const cartInnerEl = document.querySelector('.cart .cart-inner');
+//    listEl = document.createElement('div');
+//    listEl.classList.add('list');
+//    cartInnerEl.appendChild(listEl);
+//    const btnAdd = document.querySelectorAll('.cart .cart-inner .list .btnAdd');
+//    const btnDel = document.querySelectorAll('.btnDel');
+
+//    subRender(listEl);
+//  };
