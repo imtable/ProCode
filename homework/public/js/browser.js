@@ -9,15 +9,6 @@ class Product {
    };
 };
 
-const createProduct = (itemName, itemId) => {
-   let product = {
-      name: '0',
-      id: '0'
-   }
-   product.name = itemName;
-   product.id = itemId;
-}
-
 const products = [];
 const setProducts = () => {
    const productsNode = document.querySelectorAll('.products .item');
@@ -25,7 +16,7 @@ const setProducts = () => {
       const itemName = item.children[0].innerHTML;
       const itemId = item.dataset.id;
 
-      let product = createProduct(itemName, itemId);
+      let product = new Product(itemName, itemId);
       products.push(product);
    };
    return products;
@@ -159,9 +150,6 @@ const init = () => {
    orderManager();
    countIncr();
    countDecr();
-   localStorage.setItem('fruit', 'banana');
-   const fruit = localStorage.getItem('fruit');
-   console.log(fruit)
 }
 init();
 
