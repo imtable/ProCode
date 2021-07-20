@@ -12,7 +12,7 @@
    width: 1200px;
    background: lightgray;
    display: flex;
-   align-items: center;
+   align-items: flex-start;
  }
 
  .products {
@@ -31,6 +31,7 @@
    margin-left: 11px;
    background-color: lightsteelblue;
    text-align: center;
+   cursor: pointer;
  }
  .products .item .item_title {
    width: 111px;
@@ -57,7 +58,7 @@
   background-color: lightskyblue;
   margin-left: 22px;
 }
-.cart .cart-inner .cartForm .item .toServer {
+.toServer {
   display: none;
 }
 

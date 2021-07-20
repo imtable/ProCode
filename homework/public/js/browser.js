@@ -8,12 +8,19 @@ class Product {
       this.count = 1;
    };
 };
+
 const products = [];
-const productsNode = document.querySelectorAll('.products .item');
-for (let item of productsNode) {
-   let product = new Product(item.children[0].innerHTML, item.dataset.id);
-   products.push(product);
-};
+const setProducts = () => {
+   const productsNode = document.querySelectorAll('.products .item');
+   for (let item of productsNode) {
+      const itemName = item.children[0].innerHTML;
+      const itemId = item.dataset.id;
+
+      let product = new Product(itemName, itemId);
+      products.push(product);
+   };
+   return products;
+}
 
 const getCart = () => {
    const json = localStorage.getItem('cart') || '[]';
@@ -37,6 +44,7 @@ const searchProducts = (id) => {
 const addProduct = (id) => {
    const cart = getCart();
    const itemIdx = searchCart(id, cart);
+
    if (itemIdx === -1) {
       const product = searchProducts(id);
       cart.push(product);
@@ -59,37 +67,119 @@ const delProduct = (id) => {
    setCart(cart);
 };
 
+const newOrder = () => {
+   const btnNewOrder = document.querySelector('.btnNewOrder');
+   btnNewOrder.addEventListener('click', (ev) => {
+      const orderEl = document.querySelector('.cart_order');
+      orderEl.classList.add('show');
+   });
+}
+const makeOrder = () => {
+   const cartFormEl = document.forms.cartForm;
+   cartFormEl.addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const formData = new FormData(ev.target, cartFormEl);
+   
+      const { data } = await axios.post('/taskCart', formData);
+      console.log(data);
+   
+      const orderEl = document.querySelector('.cart_order');
+      orderEl.innerHTML = 'succes';
+   });
+}
+const orderManager = () => {
+   newOrder();
+   makeOrder();
+}
+
+const buy = () => {
+   const btnBuy = document.querySelectorAll('.btnBuy');
+   btnBuy.forEach((el) => {
+      el.addEventListener('click', (ev) => {
+         const { id } = ev.target.dataset;
+         addProduct(id);
+         
+         render();
+      });
+   });
+}
+
+// const countIncr = () => {
+//    document.addEventListener('click', (ev) => {
+//       if (ev.target && ev.target.classList.contains("btnAdd")) {
+//          const { id } = ev.target.dataset;
+//          addProduct(id);
+//          render();
+//        }
+//    });
+// }
+// const countDecr = () => {
+//    document.addEventListener('click', (ev) => {
+//       if (ev.target && ev.target.classList.contains("btnAdd")) {
+//          const { id } = ev.target.dataset;
+//          delProduct(id);
+//          render();
+//        }
+//    });
+// }
+
 // view
-const btnNewOrder = document.querySelector('.btnNewOrder');
-const cartFormEl = document.querySelector('.cart .cart-inner .cartForm');
-const render = () => {
+const subRender = (listEl) => {
    const cart = getCart();
    let html = '';
    for (item of cart) {
       html += `
       <div class="item" data-id='${item.id}'>
-               <h3 class="item_title">${item.name}</h3>
-               <span>count: ${item.count}</span>
-               <button class="btnDel" data-id='${item.id}' type="button">–</button>
-               <button class="btnAdd" data-id='${item.id}' type="button">+</button>
-               <input class="toServer" type="text" name='${item.name}' data-id='${item.id}' value='${item.count}'>
+         <h3 class="item_title">${item.name}</h3>
+         <span>count: ${item.count}</span>
+         <button class="btnDel" data-id='${item.id}' type="button">–</button>
+         <button class="btnAdd" id='123' data-id='${item.id}' type="button">+</button>
+         <input class="toServer" type="text" name='${item.name}' data-id='${item.id}' value='${item.count}'>
       </div>
       `;
    }
-   btnNewOrder.insertAdjacentHTML('beforeBegin', html);
-   // cartFormEl.innerHTML = html;
+   listEl.innerHTML = html;
 }
 
-// magic
-const btnBuy = document.querySelectorAll('.btnBuy');
+const render = function() {
+   let listEl = document.querySelector('.cart .cart-inner .list');
+   if (listEl) {
+      subRender(listEl);
+      return;
+   }
 
-btnBuy.forEach((el) => {
-   el.addEventListener('click', (ev) => {
-      const { id } = ev.target.dataset;
-      addProduct(id);
-      render();
+   const cartInnerEl = document.querySelector('.cart .cart-inner');
+   listEl = document.createElement('div');
+   listEl.classList.add('list');
+   cartInnerEl.appendChild(listEl);
+   const btnAdd = document.querySelectorAll('.cart .cart-inner .list .btnAdd');
+   const btnDel = document.querySelectorAll('.btnDel');
+
+   subRender(listEl);
+ };
+
+// magic
+const init = () => {
+   setProducts();
+
+   buy();
+
+   document.addEventListener('click', (ev) => {
+      if (ev.target && ev.target.classList.contains("btnAdd")) {
+         const { id } = ev.target.dataset;
+         addProduct(id);
+         render();
+       }
    });
-});
+   document.addEventListener('click', (ev) => {
+   if (ev.target && ev.target.classList.contains("btnDel")) {
+      const { id } = ev.target.dataset;
+      delProduct(id);
+      render();
+      }
+   });
+}
+init();
 
 // лвл 1
 // Делаем тоже что и на занятии - корзину. Добавляем 

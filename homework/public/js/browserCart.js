@@ -77,7 +77,6 @@ const render = () => {
       `;
    }
    btnNewOrder.insertAdjacentHTML('beforeBegin', html);
-   // cartFormEl.innerHTML = html;
 }
 
 // magic
