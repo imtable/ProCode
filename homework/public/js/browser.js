@@ -161,8 +161,8 @@ const render = function() {
 // magic
 const init = () => {
    setProducts();
-
    buy();
+   orderManager();
 
    document.addEventListener('click', (ev) => {
       if (ev.target && ev.target.classList.contains("btnAdd")) {
