@@ -13,7 +13,7 @@ const run = (server) => {
       });
 
       socket.on('typingReq', (data) => {
-         io.emit('typingRes', {userName: data.userName});
+            io.emit('typingRes', data );
       });
 
       socket.on('disconnect', () => {
