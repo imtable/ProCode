@@ -21,12 +21,8 @@ router.get('/getArticles', async function(req, res, next) {
 
 router.post('/', upload.none(), function(req, res, next) {
   const data = req.body;
-  try {
-    createArticle(data.inpTitle, data.inpAuthor, data.inpText);
-    res.json({status: 'ok'});
-  } catch (e) {
-    console.log(e);
-  }
+  createArticle(data.inpTitle, data.inpAuthor, data.inpText);
+  res.json({status: 'ok'});
 });
 
 module.exports = router;
