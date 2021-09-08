@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- <link rel='stylesheet' href='/styles/style.css' /> -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <div class="form-outer">
+      <form name="formValid" class="formValid">
+        <input name="inpId" placeholder="id" type="text">
+        <input name="inpFirstName" placeholder="first name" type="text">
+        <input name="inpLastName" placeholder="last name" type="text">
+        <input name="inpEmail" placeholder="email" type="text">
+        <input name="inpGender" placeholder="gender" type="text">
+        <input name="inpIpAdress" placeholder="ip" type="text">
+        <button type="submit">submit</button>
+      </form>
+    </div>
+   <script src="/js/browser.js"></script>
+  </body>
+</html>
