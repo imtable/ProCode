@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>mongoArticles</title>
+   <link rel="stylesheet" href="/stylesheets/style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+</head>
+<body>
+   <h1>hello, acp</h1>
+
+   <form class="form" name="formJenre">
+      <input type="text" name="inpJenre" placeholder="name of jenre">
+      <button type="submit">send</button>
+   </form>
+
+   <form class="form" name="formAuthor">
+      <input type="text" name="inpAuthorName" placeholder="name of author">
+      <input type="text" name="inpAuthorShortname" placeholder="shortname of author">
+      <button type="submit">send</button>
+   </form>
+
+   <form class="form" name="formBook">
+      <input type="text" name="inpBookName" placeholder="name of book">
+      <input type="text" name="inpBookLocation" placeholder="loc of book">
+      <input type="text" name="inpBookYear" placeholder="year of book">
+      <input type="text" name="inpBookPublisher" placeholder="publisher of book">
+      <select class="selectBookAuthors" name="selectBookAuthors" size="5" multiple="multiple">
+         <option disabled>select authors: ctrl + click</option>
+         <option value="value">value</option>
+      </select>
+      <select class="selectBookJenres" name="selectBookJenres" size="5" multiple="multiple">
+         <option disabled>select jenres: ctrl + click</option>
+         <option value="value">value</option>
+      </select>
+      <button type="submit">send</button>
+   </form>
+	<script src="javascripts/browser.js"></script>
+</body>
+</html>
