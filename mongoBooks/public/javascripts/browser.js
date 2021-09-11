@@ -5,26 +5,6 @@ const getInitData = async () => {
    return data;
 }
 
-const postJenre = () => {
-   const form = document.forms.formJenre;
-   form.addEventListener('submit', async (ev) => {
-      ev.preventDefault();
-      const formData = new FormData(ev.target);
-      const { data } = await axios.post('/acp/createJenre', formData);
-      console.log(data);
-   });
-}
-
-const postAuthor = () => {
-   const form = document.forms.formAuthor;
-   form.addEventListener('submit', async (ev) => {
-      ev.preventDefault();
-      const formData = new FormData(ev.target);
-      const { data } = await axios.post('/acp/createAuthor', formData);
-      console.log(data);
-   });
-}
-
 const postBook = () => {
    const form = document.forms.formBook;
    form.addEventListener('submit', async (ev) => {
@@ -35,7 +15,29 @@ const postBook = () => {
    });
 }
 
-const renderInit = async () => {
+const postJenre = () => {
+   const form = document.forms.formJenre;
+   form.addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const formData = new FormData(ev.target);
+      const { data } = await axios.post('/acp/createJenre', formData);
+      console.log(data);
+      render();
+   });
+}
+
+const postAuthor = () => {
+   const form = document.forms.formAuthor;
+   form.addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const formData = new FormData(ev.target);
+      const { data } = await axios.post('/acp/createAuthor', formData);
+      console.log(data);
+      render();
+   });
+}
+
+const render = async () => {
    const data = await getInitData();
    const renderSelectAuthors = async () => {
    const selectAuthorsEl = document.querySelector('.selectBookAuthors');
@@ -59,8 +61,12 @@ const renderInit = async () => {
    renderSelectJenres();
 }
 
+const renderAfterPost = async () => {
+
+}
+
 const init = () => {
-   renderInit();
+   render();
    postJenre();
    postAuthor();
    postBook();

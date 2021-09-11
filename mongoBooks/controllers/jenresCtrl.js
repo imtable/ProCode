@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 require('../bin/runners/db')
 
-const UserModel = require('../models/jenre');
+const JenresModel = require('../models/jenre');
 
 const db = mongoose.connection;
 
 const createJenre = async (name) => {
-  const article = new UserModel;
+  const article = new JenresModel;
   article.name = name;
   // try {
     const doc = await article.save();
@@ -18,7 +18,7 @@ const createJenre = async (name) => {
 }
 
 const getJenres = async () => {
-  let data = await UserModel.find().select('name');
+  let data = await JenresModel.find().select('name');
   return data;
 }
 

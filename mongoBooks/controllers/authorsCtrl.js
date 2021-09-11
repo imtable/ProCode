@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 require('../bin/runners/db')
 
-const UserModel = require('../models/author');
+const AuthorsModel = require('../models/author');
 
 const db = mongoose.connection;
 
 const createAuthor = async (name, shortname) => {
-  const article = new UserModel;
+  const article = new AuthorsModel;
   article.name = name;
   article.shortname = shortname;
   // try {
@@ -19,7 +19,7 @@ const createAuthor = async (name, shortname) => {
 }
 
 const getAuthors = async () => {
-  let data = await UserModel.find().select('shortname');
+  let data = await AuthorsModel.find().select('shortname');
   return data;
 }
 
