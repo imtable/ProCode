@@ -1,6 +1,7 @@
 var express = require('express');
 const multer = require('multer');
-const jenresCtrl = require('../controllers/jenresCtrl');
+
+const genresCtrl = require('../controllers/genresCtrl');
 const authorsCtrl = require('../controllers/authorsCtrl');
 const booksCtrl = require('../controllers/booksCtrl');
 
@@ -14,14 +15,14 @@ router.get('/', async function(req, res, next) {
 
 
 router.get('/getInitData', async function(req, res, next) {
-  const jenres = await jenresCtrl.getJenres();
+  const genres = await genresCtrl.getGenres();
   const authors = await authorsCtrl.getAuthors();
-  res.send({ jenres, authors });
+  res.send({ genres, authors });
 });
 
-router.post('/createJenre', upload.none(), function(req, res, next) {
+router.post('/createGenre', upload.none(), function(req, res, next) {
   const data = req.body;
-  jenresCtrl.createJenre(data.inpJenre);
+  genresCtrl.createGenre(data.inpGenre);
   res.json({status: 'ok'});
 });
 
@@ -35,7 +36,7 @@ router.post('/createBook', upload.none(), function(req, res, next) {
   const data = req.body;
   console.log(data)
   booksCtrl.createBook(
-    data.inpBookName, data.inpBookYear, data.inpBookLocation, data.inpBookPublisher, data.selectBookAuthors, data.selectBookJenres);
+    data.inpBookName, data.inpBookYear, data.inpBookLocation, data.inpBookPublisher, data.selectBookAuthors, data.selectBookGenres);
   res.json({status: 'ok'});
 });
 

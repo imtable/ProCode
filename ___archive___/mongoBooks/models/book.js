@@ -23,7 +23,7 @@ const generalSchema = new Schema({
    authors: [{ 
       type: Schema.Types.ObjectId, ref: 'author',
    }],
-   jenres: [{ 
+   genres: [{ 
       type: Schema.Types.ObjectId, ref: 'jenre',
    }],
 });

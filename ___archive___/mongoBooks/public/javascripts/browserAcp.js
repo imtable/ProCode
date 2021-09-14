@@ -15,12 +15,12 @@ const postBook = () => {
    });
 }
 
-const postJenre = () => {
-   const form = document.forms.formJenre;
+const postGenre = () => {
+   const form = document.forms.formGenre;
    form.addEventListener('submit', async (ev) => {
       ev.preventDefault();
       const formData = new FormData(ev.target);
-      const { data } = await axios.post('/acp/createJenre', formData);
+      const { data } = await axios.post('/acp/createGenre', formData);
       console.log(data);
       render();
    });
@@ -40,34 +40,30 @@ const postAuthor = () => {
 const render = async () => {
    const data = await getInitData();
    const renderSelectAuthors = async () => {
-   const selectAuthorsEl = document.querySelector('.selectBookAuthors');
-   let html = '<option disabled>select authors: ctrl + click</option>';
-   for (item of data.authors) {
-      html += `
-      <option value="${item._id}">${item.shortname}</option>`;
+      const selectAuthorsEl = document.querySelector('.selectBookAuthors');
+      let html = '<option disabled>select authors: ctrl + click</option>';
+      for (item of data.authors) {
+         html += `
+         <option value="${item._id}">${item.shortname}</option>`;
+      }
+      selectAuthorsEl.innerHTML = html;
    }
-   selectAuthorsEl.innerHTML = html;
-   }
-   const renderSelectJenres = async () => {
-      const selectJenresEl = document.querySelector('.selectBookJenres');
-      let html = '<option disabled>select jenres: ctrl + click</option>';
-      for (item of data.jenres) {
+   const renderSelectGenres = async () => {
+      const selectGenresEl = document.querySelector('.selectBookGenres');
+      let html = '<option disabled>select genres: ctrl + click</option>';
+      for (item of data.genres) {
          html += `
          <option value="${item._id}">${item.name}</option>`;
       }
-      selectJenresEl.innerHTML = html;
+      selectGenresEl.innerHTML = html;
    }
    renderSelectAuthors();
-   renderSelectJenres();
-}
-
-const renderAfterPost = async () => {
-
+   renderSelectGenres();
 }
 
 const init = () => {
    render();
-   postJenre();
+   postGenre();
    postAuthor();
    postBook();
 }
