@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>session</title>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <form class="form" name="form">
+      <input class="field formName" type="text" name="name" placeholder="name of item" required>
+      <input class="field formDesc" type="text" name="description" placeholder="description of item">
+      <button class="formItem_btn-submit" type="submit">send</button>
+   </form>
+    <script src="/javascripts/browser.js"></script>
+  </body>
+</html>

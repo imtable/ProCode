@@ -1,0 +1,35 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.chat {
+  margin-top: 55px;
+  background-color: tan;
+  width: 555px;
+  height: 555px;
+  padding: 11px;
+  border: 3px solid salmon;
+  overflow-y: scroll;
+}
+
+.chat .chat_string {
+  margin-top: 11px;
+}
+
+.chat_string .chat_name {
+  color: blueviolet;
+  font-size: 20px;
+}
+
+.chat_string .chat_msg {
+  color: indigo;
+}
+
+.hide {
+  display: none;
+}
