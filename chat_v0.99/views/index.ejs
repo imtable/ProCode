@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>session</title>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>welcome to chat</h1>
+
+    <div class="logout">
+      <button type="button" class=" btn logout_btn-logout">logout</button>
+    </div>
+    <div class="signing">
+      <button type="button" class=" btn signing_btn-login">login</button>
+      <button type="button" class=" btn signing_btn-reg">register</button>
+      
+      <div class="form_outer">
+        <div class="userForm_outer userFormLogin_outer">
+          <h3>enter data to login</h3>
+          <form name="userFormLogin" class="userForm">
+            <input class="userForm_userName" type="text" name="userForm_login" placeholder="your login">
+            <input class="userForm_userName" type="text" name="userForm_pwd" placeholder="your pwd">
+            <button class=" btn userForm_btn" name="userForm" type="submit">login</button>
+          </form>
+        </div>
+        
+        <div class="userForm_outer userFormReg_outer">
+          <h3>enter data to registration</h3>
+          <form name="userFormReg" class="userForm">
+            <input class="userForm_userName" type="text" name="userForm_login" placeholder="your login">
+            <input class="userForm_userName" type="text" name="userForm_pwd" placeholder="your pwd">
+            <input class="userForm_userName" type="text" name="userForm_name" placeholder="your name">
+            <button class=" btn userForm_btn" name="userForm" type="submit">registration</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat">
+      <div class="chat_messages">
+        <div class="chat_string">
+          <span class="chat_name">example_name:</span>
+          <span class="chat_msg">example_msg</span>
+        </div>
+      </div>
+      <div class="chat_footer">
+        <div class="chat_typing"></div>
+        <form name="msgForm" class="msgForm">
+          <div class="msgForm_inner">
+            <textarea class="msgForm_msg" type="text" name="msgForm_msg" maxlength="111" placeholder="type a message"></textarea>
+            <div class="msgForm_btn-outer">
+              <button class=" btn msgForm_btn" name="msgForm" type="submit">send</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/javascripts/browserChat.js"></script>
+  </body>
+</html>
