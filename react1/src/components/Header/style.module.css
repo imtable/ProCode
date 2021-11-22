@@ -1,0 +1,20 @@
+.part {
+  padding: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  /* background-color: deeppink; */
+  display: flex;
+}
+
+.item + .item {
+  margin-left: 33px;
+}
+
+.item a {
+  padding: 22px;
+  font-size: 22px;
+}
