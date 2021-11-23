@@ -17,7 +17,4 @@ function App() {
   );
 }
 
-// pochemu ne rabotaet selector #root i body #root? 
-// #root not child of body?
-
 export default App;

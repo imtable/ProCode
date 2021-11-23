@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import style from './style.module.css';
+import HomePage from '../../containers/HomePage';
 import Company from '../../containers/Company';
 import Gallery from '../../containers/Gallery';
 import Cats from '../../containers/Cats';
@@ -11,6 +12,9 @@ function App() {
     // <>
     <div className={`${style.part}`}>
       <Routes>
+        <Route exact path='/' element={<HomePage />} />
+
+        
         <Route exact path='/company' element={<Company />} />
 
         <Route exact path='/cats' element={<Cats />} />

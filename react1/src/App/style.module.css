@@ -46,3 +46,23 @@ a {
 a:hover {
   color: greenyellow;
 }
+
+button {
+  text-decoration: none;
+  color:darkseagreen;
+  background-color: dimgrey;
+  border: none;
+  padding: 11px 33px;
+  margin: 11px;
+  font-size: 22px;
+}
+
+button:hover {
+  color: greenyellow;
+}
+
+input {
+  padding: 11px 22px;
+  font-size: 22px;
+  margin: 11px;
+}
