@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.65a9935e.css",
+    "main.js": "/static/js/main.237c0b69.js",
+    "static/media/wild-cats.jpeg": "/static/media/wild-cats.e0f61ca9e34bcca04403.jpeg",
+    "index.html": "/index.html",
+    "main.65a9935e.css.map": "/static/css/main.65a9935e.css.map",
+    "main.237c0b69.js.map": "/static/js/main.237c0b69.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65a9935e.css",
+    "static/js/main.237c0b69.js"
+  ]
+}

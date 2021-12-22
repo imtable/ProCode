@@ -1,0 +1,20 @@
+.component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  display: flex;
+  width: 555px;
+  flex-wrap: wrap;
+}
+
+.gallery .item {
+  margin: 11px;
+}
+.gallery .item img {
+  width: 222px;
+  height: 222px;
+  object-fit: cover;
+}

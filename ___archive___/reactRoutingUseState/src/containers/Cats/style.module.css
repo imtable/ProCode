@@ -1,0 +1,29 @@
+.component {
+  
+}
+
+.menu {
+  /* background-color: deeppink; */
+  display: flex;
+}
+
+.item + .item {
+  margin-left: 33px;
+}
+
+.item a {
+  padding: 11px;
+  font-size: 22px;
+  background-color: grey;
+}
+
+.article {
+  margin-top: 55px;
+}
+
+.article img {
+  height: 222px;
+  width: 333px;
+  object-fit: cover;
+  margin-left: 55px;
+}
