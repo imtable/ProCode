@@ -1,0 +1,13 @@
+.component {
+  /* padding: 33px; */
+  /* display: flex; */
+}
+
+.task {
+  text-align: center;
+  display: flex;
+}
+
+.chatElement {
+  margin: 11px;
+}

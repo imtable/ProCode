@@ -1,0 +1,19 @@
+.part {
+  padding: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu .item + .item {
+  margin-left: 33px;
+}
+
+.menu .item a {
+  padding: 22px;
+  font-size: 22px;
+}

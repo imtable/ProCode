@@ -1,0 +1,68 @@
+/* my first react-app default styles */
+/* * {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+body > div {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: lightgray;
+}
+
+.part {}
+
+header{
+  flex: 0 0 auto;
+  background-color:dimgrey;
+}
+
+main{
+  flex: 1 0 auto;
+}
+
+footer{
+  flex: 0 0 auto;
+  background-color:dimgrey;
+}
+
+a {
+  text-decoration: none;
+  color:darkseagreen;
+}
+
+a:hover {
+  color: greenyellow;
+}
+
+button {
+  text-decoration: none;
+  color:darkseagreen;
+  background-color: dimgrey;
+  border: none;
+  padding: 11px 33px;
+  margin: 11px;
+  font-size: 22px;
+}
+
+button:hover {
+  color: greenyellow;
+}
+
+input {
+  padding: 11px 22px;
+  font-size: 22px;
+  margin: 11px;
+} */
